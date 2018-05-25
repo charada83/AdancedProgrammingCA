@@ -16,5 +16,10 @@ namespace AdancedProgrammingCA
         {
             InitializeComponent();
         }
+
+        private void btnCancelReg_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

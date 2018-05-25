@@ -56,8 +56,8 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuRegister,
-            this.menuExitLogin});
+            this.menuExitLogin,
+            this.menuRegister});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
@@ -65,14 +65,14 @@
             // menuRegister
             // 
             this.menuRegister.Name = "menuRegister";
-            this.menuRegister.Size = new System.Drawing.Size(252, 30);
+            this.menuRegister.Size = new System.Drawing.Size(172, 30);
             this.menuRegister.Text = "Register";
             this.menuRegister.Click += new System.EventHandler(this.menuRegister_Click);
             // 
             // menuExitLogin
             // 
             this.menuExitLogin.Name = "menuExitLogin";
-            this.menuExitLogin.Size = new System.Drawing.Size(252, 30);
+            this.menuExitLogin.Size = new System.Drawing.Size(172, 30);
             this.menuExitLogin.Text = "Exit Login";
             this.menuExitLogin.Click += new System.EventHandler(this.menuExitLogin_Click);
             // 
@@ -105,6 +105,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(232, 165);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(208, 26);
             this.txtPassword.TabIndex = 4;
             // 

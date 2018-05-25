@@ -132,6 +132,7 @@
             this.btnCancelReg.TabIndex = 12;
             this.btnCancelReg.Text = "Cancel";
             this.btnCancelReg.UseVisualStyleBackColor = true;
+            this.btnCancelReg.Click += new System.EventHandler(this.btnCancelReg_Click);
             // 
             // Register
             // 
