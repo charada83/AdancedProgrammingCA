@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Menu = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuRegister = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuExitLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -39,42 +35,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lnkRegister = new System.Windows.Forms.LinkLabel();
             this.btnLoginCancel = new System.Windows.Forms.Button();
-            this.Menu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Menu
-            // 
-            this.Menu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.Menu.Location = new System.Drawing.Point(0, 0);
-            this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(515, 33);
-            this.Menu.TabIndex = 0;
-            this.Menu.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuExitLogin,
-            this.menuRegister});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // menuRegister
-            // 
-            this.menuRegister.Name = "menuRegister";
-            this.menuRegister.Size = new System.Drawing.Size(172, 30);
-            this.menuRegister.Text = "Register";
-            this.menuRegister.Click += new System.EventHandler(this.menuRegister_Click);
-            // 
-            // menuExitLogin
-            // 
-            this.menuExitLogin.Name = "menuExitLogin";
-            this.menuExitLogin.Size = new System.Drawing.Size(172, 30);
-            this.menuExitLogin.Text = "Exit Login";
-            this.menuExitLogin.Click += new System.EventHandler(this.menuExitLogin_Click);
             // 
             // lblUsername
             // 
@@ -152,29 +113,27 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.Menu);
-            this.MainMenuStrip = this.Menu;
             this.Name = "formSMS";
             this.Text = "Student Management System";
-            this.Menu.ResumeLayout(false);
-            this.Menu.PerformLayout();
+            this.Controls.SetChildIndex(this.lblUsername, 0);
+            this.Controls.SetChildIndex(this.txtUsername, 0);
+            this.Controls.SetChildIndex(this.lblPassword, 0);
+            this.Controls.SetChildIndex(this.txtPassword, 0);
+            this.Controls.SetChildIndex(this.btnLogin, 0);
+            this.Controls.SetChildIndex(this.lnkRegister, 0);
+            this.Controls.SetChildIndex(this.btnLoginCancel, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip Menu;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuRegister;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel lnkRegister;
-        private System.Windows.Forms.ToolStripMenuItem menuExitLogin;
         private System.Windows.Forms.Button btnLoginCancel;
     }
 }

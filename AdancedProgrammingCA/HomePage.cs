@@ -1,4 +1,5 @@
-﻿using BIZ;
+﻿
+using BAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AdancedProgrammingCA
 {
-    public partial class formSMS : Form
+    public partial class formSMS : FormMenu
     {
         public formSMS()
         {
@@ -28,31 +29,31 @@ namespace AdancedProgrammingCA
 
             if (status == "no")
             {
-                MessageBox.Show("failed to Login");
+                MessageBox.Show("Failed to Login");
             }
-            //else
-            //{
-            //    MessageBox.Show("Success");
-            //    lblDisplay.Text = "Welcome " + status;
+            else
+            {
+                MessageBox.Show("Login Successful");
+             //   lblDisplay.Text = "Welcome " + status;
             //    txtUser.Enabled = false;
             //    txtPass.Enabled = false;
             //    label1.Enabled = false;
             //    label2.Enabled = false;
             //    btnLogin.Enabled = false;
             //    btnReg.Enabled = false;
-            //}
+            }
         }
 
         private void lnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Register register = new Register();
-            //r.ShowDialog();
+            Register register = new Register();
+            register.ShowDialog();
         }
 
         private void menuRegister_Click(object sender, EventArgs e)
         {
-            //Register reg = new Register();
-            //reg.ShowDialog();
+            Register reg = new Register();
+            reg.ShowDialog();
         }
 
         private void menuExitLogin_Click(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace AdancedProgrammingCA
 
         private void btnLoginCancel_Click(object sender, EventArgs e)
         {
-            //code to cancel login
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

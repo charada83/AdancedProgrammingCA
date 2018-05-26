@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BAL.Enums
+{
+    public enum Courses
+    {
+        Accountancy,
+        Arts,
+        Business,
+        Music,
+        SoftwareDevelopment        
+    }
+}

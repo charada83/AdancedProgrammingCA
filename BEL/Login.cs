@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DAL;
 
 
-namespace BIZ
+namespace BAL
 {
     public class Login
     {

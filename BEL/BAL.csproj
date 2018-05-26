@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewStudent.cs" />
+    <Compile Include="Enums\Counties.cs" />
+    <Compile Include="Enums\Courses.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="HashData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

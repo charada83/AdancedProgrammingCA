@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace AdancedProgrammingCA
 {
-    public partial class Register : Form
+    public partial class Register : FormMenu
     {
+
         public Register()
         {
-            InitializeComponent();
+            InitializeComponent();          
         }
 
         private void btnCancelReg_Click(object sender, EventArgs e)
