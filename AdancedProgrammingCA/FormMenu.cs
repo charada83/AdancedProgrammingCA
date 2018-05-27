@@ -17,14 +17,5 @@ namespace AdancedProgrammingCA
             InitializeComponent();
         }
 
-        private void editMenuItem_DropDownOpening(object sender, EventArgs e)
-        {
-            
-                editMenuItem.Enabled = false;
-                addStudentMenuItem.Enabled = false;
-                editStudentMenuItem.Enabled = false;
-                deleteStudentMenuItem.Enabled = false;
-            
-        }
     }
 }

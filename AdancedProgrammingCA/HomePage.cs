@@ -23,19 +23,20 @@ namespace AdancedProgrammingCA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string user = txtUsername.Text;
-            string pass = hash.HashPassword(txtPassword.Text);
+            //string user = txtUsername.Text;
+            //string pass = hash.HashPassword(txtPassword.Text);
 
-            Login log = new Login(user, pass);
-            string status = log.CheckUserPass();
+            //Login log = new Login(user, pass);
+            //string status = log.CheckUserPass();
 
-            if (status == "no")
+            //if (status == "no")
+            //{
+            //    MessageBox.Show("Failed to Login");
+            //}
+            //else
             {
-                MessageBox.Show("Failed to Login");
-            }
-            else
-            {
-                MessageBox.Show("Login Successful");
+                ShowStudents students = new ShowStudents();
+                students.Show();
              //   lblDisplay.Text = "Welcome " + status;
             //    txtUser.Enabled = false;
             //    txtPass.Enabled = false;
