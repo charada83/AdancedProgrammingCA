@@ -66,13 +66,13 @@
             // exitLoginMenuItem
             // 
             this.exitLoginMenuItem.Name = "exitLoginMenuItem";
-            this.exitLoginMenuItem.Size = new System.Drawing.Size(172, 30);
+            this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
             this.exitLoginMenuItem.Text = "Exit Login";
             // 
             // registerMenuItem
             // 
             this.registerMenuItem.Name = "registerMenuItem";
-            this.registerMenuItem.Size = new System.Drawing.Size(172, 30);
+            this.registerMenuItem.Size = new System.Drawing.Size(252, 30);
             this.registerMenuItem.Text = "Register";
             // 
             // editMenuItem
@@ -89,19 +89,19 @@
             // addStudentMenuItem
             // 
             this.addStudentMenuItem.Name = "addStudentMenuItem";
-            this.addStudentMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.addStudentMenuItem.Size = new System.Drawing.Size(212, 30);
             this.addStudentMenuItem.Text = "Add Student";
             // 
             // editStudentMenuItem
             // 
             this.editStudentMenuItem.Name = "editStudentMenuItem";
-            this.editStudentMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.editStudentMenuItem.Size = new System.Drawing.Size(212, 30);
             this.editStudentMenuItem.Text = "Edit Student";
             // 
             // deleteStudentMenuItem
             // 
             this.deleteStudentMenuItem.Name = "deleteStudentMenuItem";
-            this.deleteStudentMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.deleteStudentMenuItem.Size = new System.Drawing.Size(212, 30);
             this.deleteStudentMenuItem.Text = "Delete Student";
             // 
             // viewMenuItem
@@ -115,7 +115,7 @@
             // databaseHistoryMenuItem
             // 
             this.databaseHistoryMenuItem.Name = "databaseHistoryMenuItem";
-            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(232, 30);
+            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(252, 30);
             this.databaseHistoryMenuItem.Text = "Database History";
             // 
             // FormMenu

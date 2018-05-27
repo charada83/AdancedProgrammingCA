@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AdancedProgrammingCA
 {
-    public abstract partial class FormMenu : Form
+    public partial class FormMenu : Form
     {
         public FormMenu()
         {

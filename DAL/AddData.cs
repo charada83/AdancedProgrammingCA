@@ -10,14 +10,14 @@ namespace DAL
 {
     public class AddData:DAO
     {
-        public void AddStaff(string staffName, string staffPass, string staffFullname)
+        public void AddStaff(string staffFirstname, string staffSurname, string staffUsername, string staffPass)
         {
-            Random r = new Random();
-            SqlCommand cmd = new SqlCommand("INSERT INTO DBSStaff (UserName,Salt,Password,FullName) VALUES (@uname,@salt,@pass,@fullname)", OpenCon());
-            cmd.Parameters.AddWithValue("@uname", staffName);
-            cmd.Parameters.AddWithValue("@salt", r.Next());
+            
+            SqlCommand cmd = new SqlCommand("INSERT INTO DBSStaff (Firstname, Surname, UserName,Password) VALUES (@fname, @sname, @uname,@pass)", OpenCon());
+            cmd.Parameters.AddWithValue("@fname", staffFirstname);
+            cmd.Parameters.AddWithValue("@sname", staffSurname);
+            cmd.Parameters.AddWithValue("@uname", staffUsername);
             cmd.Parameters.AddWithValue("@pass", staffPass);
-            cmd.Parameters.AddWithValue("@fullname", staffFullname);
             cmd.ExecuteNonQuery();
             CloseCon();
         }

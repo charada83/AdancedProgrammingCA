@@ -34,10 +34,10 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnRegForm = new System.Windows.Forms.Button();
             this.lnkLogin = new System.Windows.Forms.LinkLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtRegFirstname = new System.Windows.Forms.TextBox();
+            this.txtRegSurname = new System.Windows.Forms.TextBox();
+            this.txtRegUsername = new System.Windows.Forms.TextBox();
+            this.txtRegPassword = new System.Windows.Forms.TextBox();
             this.btnCancelReg = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -85,6 +85,7 @@
             this.btnRegForm.TabIndex = 6;
             this.btnRegForm.Text = "Register";
             this.btnRegForm.UseVisualStyleBackColor = true;
+            this.btnRegForm.Click += new System.EventHandler(this.btnRegForm_Click);
             // 
             // lnkLogin
             // 
@@ -95,34 +96,36 @@
             this.lnkLogin.TabIndex = 7;
             this.lnkLogin.TabStop = true;
             this.lnkLogin.Text = "Already Registered? Login Here";
+            this.lnkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin_LinkClicked);
             // 
-            // textBox1
+            // txtRegFirstname
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 26);
-            this.textBox1.TabIndex = 8;
+            this.txtRegFirstname.Location = new System.Drawing.Point(187, 46);
+            this.txtRegFirstname.Name = "txtRegFirstname";
+            this.txtRegFirstname.Size = new System.Drawing.Size(239, 26);
+            this.txtRegFirstname.TabIndex = 8;
             // 
-            // textBox2
+            // txtRegSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(187, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 26);
-            this.textBox2.TabIndex = 9;
+            this.txtRegSurname.Location = new System.Drawing.Point(187, 94);
+            this.txtRegSurname.Name = "txtRegSurname";
+            this.txtRegSurname.Size = new System.Drawing.Size(239, 26);
+            this.txtRegSurname.TabIndex = 9;
             // 
-            // textBox3
+            // txtRegUsername
             // 
-            this.textBox3.Location = new System.Drawing.Point(187, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(239, 26);
-            this.textBox3.TabIndex = 10;
+            this.txtRegUsername.Location = new System.Drawing.Point(187, 143);
+            this.txtRegUsername.Name = "txtRegUsername";
+            this.txtRegUsername.Size = new System.Drawing.Size(239, 26);
+            this.txtRegUsername.TabIndex = 10;
             // 
-            // textBox4
+            // txtRegPassword
             // 
-            this.textBox4.Location = new System.Drawing.Point(187, 195);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 26);
-            this.textBox4.TabIndex = 11;
+            this.txtRegPassword.Location = new System.Drawing.Point(187, 195);
+            this.txtRegPassword.Name = "txtRegPassword";
+            this.txtRegPassword.PasswordChar = '*';
+            this.txtRegPassword.Size = new System.Drawing.Size(239, 26);
+            this.txtRegPassword.TabIndex = 11;
             // 
             // btnCancelReg
             // 
@@ -140,10 +143,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 415);
             this.Controls.Add(this.btnCancelReg);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRegPassword);
+            this.Controls.Add(this.txtRegUsername);
+            this.Controls.Add(this.txtRegSurname);
+            this.Controls.Add(this.txtRegFirstname);
             this.Controls.Add(this.lnkLogin);
             this.Controls.Add(this.btnRegForm);
             this.Controls.Add(this.lblPassword);
@@ -151,6 +154,7 @@
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblFname);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,10 +169,10 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnRegForm;
         private System.Windows.Forms.LinkLabel lnkLogin;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtRegFirstname;
+        private System.Windows.Forms.TextBox txtRegSurname;
+        private System.Windows.Forms.TextBox txtRegUsername;
+        private System.Windows.Forms.TextBox txtRegPassword;
         private System.Windows.Forms.Button btnCancelReg;
     }
 }

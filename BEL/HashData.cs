@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace BAL
 {
-    class HashData
+    public class HashData
     {
         public string HashPassword(string input)
         {

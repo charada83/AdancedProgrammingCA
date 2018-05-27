@@ -15,7 +15,7 @@ namespace DAL
         public string[] CheckUser(string user)
         {
             SqlDataReader dr = null;
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE UserName=@user", OpenCon());
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DBSStaff WHERE UserName=@user", OpenCon());
             cmd.Parameters.AddWithValue("@user", user);
 
             dr = cmd.ExecuteReader();

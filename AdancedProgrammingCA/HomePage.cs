@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace AdancedProgrammingCA
 {
-    public partial class formSMS : FormMenu
+    public partial class formSMS : Form
     {
+        HashData hash = new HashData();
+
         public formSMS()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace AdancedProgrammingCA
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string user = txtUsername.Text;
-            string pass = txtPassword.Text;
+            string pass = hash.HashPassword(txtPassword.Text);
 
             Login log = new Login(user, pass);
             string status = log.CheckUserPass();
