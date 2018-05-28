@@ -23,17 +23,17 @@ namespace AdancedProgrammingCA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string user = txtUsername.Text;
-            //string pass = hash.HashPassword(txtPassword.Text);
+            string user = txtUsername.Text;
+            string pass = hash.HashPassword(txtPassword.Text);
 
-            //Login log = new Login(user, pass);
-            //string status = log.CheckUserPass();
+            Login log = new Login(user, pass);
+            string status = log.CheckUserPass();
 
-            //if (status == "no")
-            //{
-            //    MessageBox.Show("Failed to Login");
-            //}
-            //else
+            if (status == "no")
+            {
+                MessageBox.Show("Failed to Login");
+            }
+            else
             {
                 ShowStudents students = new ShowStudents();
                 students.Show();
@@ -59,14 +59,16 @@ namespace AdancedProgrammingCA
             reg.ShowDialog();
         }
 
-        private void menuExitLogin_Click(object sender, EventArgs e)
-        {
-            //Code to exit login
-        }
-
         private void btnLoginCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            txtUsername.Clear();
+            txtPassword.Clear();
+        }
+
+        private void exitLoginMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for using the Student Management System");
+            this.Close();
         }
     }
 }

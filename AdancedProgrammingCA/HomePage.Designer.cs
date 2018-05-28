@@ -37,8 +37,8 @@
             this.btnLoginCancel = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitLoginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegister = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,23 +120,24 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitLoginToolStripMenuItem,
-            this.registerToolStripMenuItem});
+            this.exitLoginMenuItem,
+            this.menuRegister});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // exitLoginToolStripMenuItem
+            // exitLoginMenuItem
             // 
-            this.exitLoginToolStripMenuItem.Name = "exitLoginToolStripMenuItem";
-            this.exitLoginToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.exitLoginToolStripMenuItem.Text = "Exit Login";
+            this.exitLoginMenuItem.Name = "exitLoginMenuItem";
+            this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exitLoginMenuItem.Text = "Exit Login";
+            this.exitLoginMenuItem.Click += new System.EventHandler(this.exitLoginMenuItem_Click);
             // 
-            // registerToolStripMenuItem
+            // menuRegister
             // 
-            this.registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            this.registerToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.registerToolStripMenuItem.Text = "Register";
+            this.menuRegister.Name = "menuRegister";
+            this.menuRegister.Size = new System.Drawing.Size(252, 30);
+            this.menuRegister.Text = "Register";
             // 
             // formSMS
             // 
@@ -172,8 +173,8 @@
         private System.Windows.Forms.Button btnLoginCancel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitLoginToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitLoginMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuRegister;
     }
 }
 

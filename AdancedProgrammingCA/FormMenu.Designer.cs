@@ -73,7 +73,7 @@
             // 
             this.registerMenuItem.Name = "registerMenuItem";
             this.registerMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.registerMenuItem.Text = "Register";
+            this.registerMenuItem.Text = " ";
             // 
             // editMenuItem
             // 

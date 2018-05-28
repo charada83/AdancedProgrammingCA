@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.myList = new System.Windows.Forms.ListView();
+            this.SuspendLayout();
+            // 
+            // myList
+            // 
+            this.myList.Location = new System.Drawing.Point(111, 107);
+            this.myList.Name = "myList";
+            this.myList.Size = new System.Drawing.Size(519, 266);
+            this.myList.TabIndex = 1;
+            this.myList.UseCompatibleStateImageBehavior = false;
+            // 
+            // ShowStudents
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "ShowStudents";
+            this.ClientSize = new System.Drawing.Size(716, 528);
+            this.Controls.Add(this.myList);
+            this.Name = "ShowStudents";
+            this.Text = "Show Students";
+            this.Controls.SetChildIndex(this.myList, 0);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView myList;
     }
 }

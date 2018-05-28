@@ -46,10 +46,10 @@
             this.txtAddAddress1 = new System.Windows.Forms.TextBox();
             this.txtAddAddress2 = new System.Windows.Forms.TextBox();
             this.txtAddCity = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboAddCounty = new System.Windows.Forms.ComboBox();
             this.rdoUnderGrad = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboAddCourse = new System.Windows.Forms.ComboBox();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnAddCancel = new System.Windows.Forms.Button();
             this.lblShowStudentId = new System.Windows.Forms.Label();
@@ -203,13 +203,13 @@
             this.txtAddCity.Size = new System.Drawing.Size(286, 26);
             this.txtAddCity.TabIndex = 18;
             // 
-            // comboBox1
+            // cboAddCounty
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(178, 347);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(286, 28);
-            this.comboBox1.TabIndex = 19;
+            this.cboAddCounty.FormattingEnabled = true;
+            this.cboAddCounty.Location = new System.Drawing.Point(178, 347);
+            this.cboAddCounty.Name = "cboAddCounty";
+            this.cboAddCounty.Size = new System.Drawing.Size(286, 28);
+            this.cboAddCounty.TabIndex = 19;
             // 
             // rdoUnderGrad
             // 
@@ -233,13 +233,13 @@
             this.radioButton2.Text = "PostGraduate";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cboAddCourse
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(178, 432);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(286, 28);
-            this.comboBox2.TabIndex = 22;
+            this.cboAddCourse.FormattingEnabled = true;
+            this.cboAddCourse.Location = new System.Drawing.Point(178, 432);
+            this.cboAddCourse.Name = "cboAddCourse";
+            this.cboAddCourse.Size = new System.Drawing.Size(286, 28);
+            this.cboAddCourse.TabIndex = 22;
             // 
             // btnAddStudent
             // 
@@ -276,10 +276,10 @@
             this.Controls.Add(this.lblShowStudentId);
             this.Controls.Add(this.btnAddCancel);
             this.Controls.Add(this.btnAddStudent);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboAddCourse);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.rdoUnderGrad);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboAddCounty);
             this.Controls.Add(this.txtAddCity);
             this.Controls.Add(this.txtAddAddress2);
             this.Controls.Add(this.txtAddAddress1);
@@ -318,10 +318,10 @@
             this.Controls.SetChildIndex(this.txtAddAddress1, 0);
             this.Controls.SetChildIndex(this.txtAddAddress2, 0);
             this.Controls.SetChildIndex(this.txtAddCity, 0);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
+            this.Controls.SetChildIndex(this.cboAddCounty, 0);
             this.Controls.SetChildIndex(this.rdoUnderGrad, 0);
             this.Controls.SetChildIndex(this.radioButton2, 0);
-            this.Controls.SetChildIndex(this.comboBox2, 0);
+            this.Controls.SetChildIndex(this.cboAddCourse, 0);
             this.Controls.SetChildIndex(this.btnAddStudent, 0);
             this.Controls.SetChildIndex(this.btnAddCancel, 0);
             this.Controls.SetChildIndex(this.lblShowStudentId, 0);
@@ -350,10 +350,10 @@
         private System.Windows.Forms.TextBox txtAddAddress1;
         private System.Windows.Forms.TextBox txtAddAddress2;
         private System.Windows.Forms.TextBox txtAddCity;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboAddCounty;
         private System.Windows.Forms.RadioButton rdoUnderGrad;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboAddCourse;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnAddCancel;
         private System.Windows.Forms.Label lblShowStudentId;

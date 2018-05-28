@@ -15,22 +15,24 @@ namespace DAL
         public string[] CheckUser(string user)
         {
             SqlDataReader dr = null;
+
             SqlCommand cmd = new SqlCommand("SELECT * FROM DBSStaff WHERE UserName=@user", OpenCon());
             cmd.Parameters.AddWithValue("@user", user);
 
             dr = cmd.ExecuteReader();
+
             if (dr.Read())
             {
-                string[] ret = new string[5];
-                for (int i = 0; i < 5; i++)
-                {
-                    ret[i] = "" + dr[i];
+               string[] ret = new string[3];
+                for (int i = 0; i < 3; i++)
+               {
+                   ret[i] = "" + dr[i];
                 }
                 return ret;
             }
             else
             {
-                return null;
+               return null;
             }
         }
     }

@@ -30,8 +30,8 @@ namespace BAL
             }
             else
             {
-                if (info[2] + info[3] == Password)
-                    return info[4];//uid, username, salt, passwordhash, 3:name
+                if (info[2] == Password)
+                    return info[2];
                 else
                     return "no";
             }
