@@ -27,14 +27,14 @@ namespace AdancedProgrammingCA
             string pass = hash.HashPassword(txtPassword.Text);
 
             Login log = new Login(user, pass);
-            string status = log.CheckUserPass();
+            //string status = log.CheckUserPass();
 
-            if (status == "no")
-            {
-                MessageBox.Show("Failed to Login");
-            }
-            else
-            {
+            //if (status == "no")
+            //{
+            //    MessageBox.Show("Failed to Login");
+            //}
+            //else
+            //{
                 ShowStudents students = new ShowStudents();
                 students.Show();
              //   lblDisplay.Text = "Welcome " + status;
@@ -44,7 +44,7 @@ namespace AdancedProgrammingCA
             //    label2.Enabled = false;
             //    btnLogin.Enabled = false;
             //    btnReg.Enabled = false;
-            }
+            //}
         }
 
         private void lnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

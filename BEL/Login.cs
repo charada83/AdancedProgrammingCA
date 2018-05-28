@@ -21,21 +21,21 @@ namespace BAL
 
         CheckLogin cl = new CheckLogin();
 
-        public string CheckUserPass()
-        {
-            string[] info = cl.CheckUser(Username);
-            if (info == null)
-            {
-                return "no";
-            }
-            else
-            {
-                if (info[2] == Password)
-                    return info[2];
-                else
-                    return "no";
-            }
+        //public string CheckUserPass()
+        //{
+        //    string[] info = cl.CheckUser(Username);
+        //    if (info == null)
+        //    {
+        //        return "no";
+        //    }
+        //    else
+        //    {
+        //        if (info[2] == Password)
+        //            return info[2];
+        //        else
+        //            return "no";
+        //    }
 
-        }
+        //}
     }
 }

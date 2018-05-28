@@ -32,7 +32,7 @@
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitLoginMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +46,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
-            this.editMenuItem,
+            this.studentMenuItem,
             this.viewMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -66,24 +66,24 @@
             // exitLoginMenuItem
             // 
             this.exitLoginMenuItem.Name = "exitLoginMenuItem";
-            this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exitLoginMenuItem.Size = new System.Drawing.Size(218, 30);
             this.exitLoginMenuItem.Text = "Exit Application";
             // 
             // registerMenuItem
             // 
             this.registerMenuItem.Name = "registerMenuItem";
-            this.registerMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.registerMenuItem.Size = new System.Drawing.Size(218, 30);
             this.registerMenuItem.Text = " ";
             // 
-            // editMenuItem
+            // studentMenuItem
             // 
-            this.editMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addStudentMenuItem,
             this.editStudentMenuItem,
             this.deleteStudentMenuItem});
-            this.editMenuItem.Name = "editMenuItem";
-            this.editMenuItem.Size = new System.Drawing.Size(54, 29);
-            this.editMenuItem.Text = "Edit";
+            this.studentMenuItem.Name = "studentMenuItem";
+            this.studentMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.studentMenuItem.Text = "Student";
             // 
             // addStudentMenuItem
             // 
@@ -114,7 +114,7 @@
             // databaseHistoryMenuItem
             // 
             this.databaseHistoryMenuItem.Name = "databaseHistoryMenuItem";
-            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(232, 30);
             this.databaseHistoryMenuItem.Text = "Database History";
             // 
             // FormMenu
@@ -139,7 +139,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitLoginMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem studentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addStudentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editStudentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteStudentMenuItem;
