@@ -14,38 +14,38 @@ namespace AdancedProgrammingCA
 {
     public partial class formSMS : Form
     {
-        HashData hash = new HashData();
-
         public formSMS()
         {
             InitializeComponent();
         }
 
+        HashData hash = new HashData();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string user = txtUsername.Text;
             string pass = hash.HashPassword(txtPassword.Text);
 
             Login log = new Login(user, pass);
-            //string status = log.CheckUserPass();
 
-            //if (status == "no")
-            //{
-            //    MessageBox.Show("Failed to Login");
-            //}
-            //else
-            //{
+            string status = log.CheckUserPass();
+
+            if (status == "no")
+            {
+                MessageBox.Show("Failed to Login");
+            }
+            else
+            {
                 ShowStudents students = new ShowStudents();
                 students.Show();
-             //   lblDisplay.Text = "Welcome " + status;
-            //    txtUser.Enabled = false;
-            //    txtPass.Enabled = false;
-            //    label1.Enabled = false;
-            //    label2.Enabled = false;
-            //    btnLogin.Enabled = false;
-            //    btnReg.Enabled = false;
-            //}
-        }
+                //   lblDisplay.Text = "Welcome " + status;
+                //    txtUser.Enabled = false;
+                //    txtPass.Enabled = false;
+                //    label1.Enabled = false;
+                //    label2.Enabled = false;
+                //    btnLogin.Enabled = false;
+                //    btnReg.Enabled = false;
+                }
+            }
 
         private void lnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -68,7 +68,7 @@ namespace AdancedProgrammingCA
         private void exitLoginMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you for using the Student Management System");
-            this.Close();
+            Application.Exit();
         }
     }
 }

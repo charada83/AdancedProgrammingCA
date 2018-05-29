@@ -13,7 +13,7 @@ namespace DAL
         public void AddStaff(string staffFirstname, string staffSurname, string staffUsername, string staffPass)
         {
             
-            SqlCommand cmd = new SqlCommand("INSERT INTO DBSStaff (Firstname, Surname, UserName,Password) VALUES (@fname, @sname, @uname,@pass)", OpenCon());
+            SqlCommand cmd = new SqlCommand("INSERT INTO DBSStaff (Firstname, Surname, Username,Password) VALUES (@fname, @sname, @uname,@pass)", OpenCon());
             cmd.Parameters.AddWithValue("@fname", staffFirstname);
             cmd.Parameters.AddWithValue("@sname", staffSurname);
             cmd.Parameters.AddWithValue("@uname", staffUsername);

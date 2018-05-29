@@ -10,30 +10,30 @@ namespace DAL
 {
     public class CheckLogin : DAO
     {
-        public string UserLoginName { get; set; }
+        public string[] CheckUser(string user)
+        {
+            SqlDataReader dr = null;
 
-        //public string[] CheckUser(string user)
-        //{
-        //    SqlDataReader dr = null;
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DBSStaff WHERE UserName=@uname", OpenCon());
+            cmd.Parameters.AddWithValue("@uname", user);
 
-        //    SqlCommand cmd = new SqlCommand("SELECT * FROM DBSStaff WHERE UserName=@user", OpenCon());
-        //    cmd.Parameters.AddWithValue("@user", user);
+            dr = cmd.ExecuteReader();
 
-        //    dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                string[] ret = new string[5];
+                for (int i = 0; i < 5; i++)
+                {
+                    ret[i] = "" + dr[i];
+                }
+                return ret;
+            }
+            else
+            {
+                return null;
+            }
 
-        //    if (dr.Read())
-        //    {
-        //       string[] ret = new string[3];
-        //        for (int i = 0; i < 3; i++)
-        //       {
-        //           ret[i] = "" + dr[i];
-        //        }
-        //        return ret;
-        //    }
-        //    else
-        //    {
-        //       return null;
-        //    }
-        //}
+            // CloseCon();
+        }
     }
 }
