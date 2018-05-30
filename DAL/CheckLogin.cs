@@ -32,8 +32,6 @@ namespace DAL
             {
                 return null;
             }
-
-            // CloseCon();
         }
     }
 }

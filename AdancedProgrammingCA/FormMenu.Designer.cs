@@ -61,18 +61,18 @@
             this.registerMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(50, 29);
-            this.fileMenuItem.Text = "File";
+            this.fileMenuItem.Text = "&File";
             // 
             // exitLoginMenuItem
             // 
             this.exitLoginMenuItem.Name = "exitLoginMenuItem";
-            this.exitLoginMenuItem.Size = new System.Drawing.Size(218, 30);
-            this.exitLoginMenuItem.Text = "Exit Application";
+            this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exitLoginMenuItem.Text = "&Exit Application";
             // 
             // registerMenuItem
             // 
             this.registerMenuItem.Name = "registerMenuItem";
-            this.registerMenuItem.Size = new System.Drawing.Size(218, 30);
+            this.registerMenuItem.Size = new System.Drawing.Size(252, 30);
             this.registerMenuItem.Text = " ";
             // 
             // studentMenuItem
@@ -83,26 +83,26 @@
             this.deleteStudentMenuItem});
             this.studentMenuItem.Name = "studentMenuItem";
             this.studentMenuItem.Size = new System.Drawing.Size(85, 29);
-            this.studentMenuItem.Text = "Student";
+            this.studentMenuItem.Text = "&Student";
             // 
             // addStudentMenuItem
             // 
             this.addStudentMenuItem.Name = "addStudentMenuItem";
-            this.addStudentMenuItem.Size = new System.Drawing.Size(212, 30);
+            this.addStudentMenuItem.Size = new System.Drawing.Size(252, 30);
             this.addStudentMenuItem.Text = "Add Student";
             this.addStudentMenuItem.Click += new System.EventHandler(this.addStudentMenuItem_Click);
             // 
             // editStudentMenuItem
             // 
             this.editStudentMenuItem.Name = "editStudentMenuItem";
-            this.editStudentMenuItem.Size = new System.Drawing.Size(212, 30);
+            this.editStudentMenuItem.Size = new System.Drawing.Size(252, 30);
             this.editStudentMenuItem.Text = "Edit Student";
             this.editStudentMenuItem.Click += new System.EventHandler(this.editStudentMenuItem_Click);
             // 
             // deleteStudentMenuItem
             // 
             this.deleteStudentMenuItem.Name = "deleteStudentMenuItem";
-            this.deleteStudentMenuItem.Size = new System.Drawing.Size(212, 30);
+            this.deleteStudentMenuItem.Size = new System.Drawing.Size(252, 30);
             this.deleteStudentMenuItem.Text = "Delete Student";
             // 
             // viewMenuItem
@@ -111,12 +111,12 @@
             this.databaseHistoryMenuItem});
             this.viewMenuItem.Name = "viewMenuItem";
             this.viewMenuItem.Size = new System.Drawing.Size(61, 29);
-            this.viewMenuItem.Text = "View";
+            this.viewMenuItem.Text = "&View";
             // 
             // databaseHistoryMenuItem
             // 
             this.databaseHistoryMenuItem.Name = "databaseHistoryMenuItem";
-            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(232, 30);
+            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(252, 30);
             this.databaseHistoryMenuItem.Text = "Database History";
             // 
             // FormMenu

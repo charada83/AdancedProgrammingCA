@@ -50,11 +50,11 @@
             this.lblShowStudentId = new System.Windows.Forms.Label();
             this.grpStudentDetails = new System.Windows.Forms.GroupBox();
             this.grpCourseDetails = new System.Windows.Forms.GroupBox();
-            this.lblCourse = new System.Windows.Forms.Label();
-            this.cboAddCourse = new System.Windows.Forms.ComboBox();
-            this.lblLevel = new System.Windows.Forms.Label();
-            this.rdoUndergrad = new System.Windows.Forms.RadioButton();
             this.rdoPostgrad = new System.Windows.Forms.RadioButton();
+            this.rdoUndergrad = new System.Windows.Forms.RadioButton();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.cboAddCourse = new System.Windows.Forms.ComboBox();
+            this.lblCourse = new System.Windows.Forms.Label();
             this.grpStudentDetails.SuspendLayout();
             this.grpCourseDetails.SuspendLayout();
             this.SuspendLayout();
@@ -225,11 +225,12 @@
             this.lblShowStudentId.Size = new System.Drawing.Size(170, 20);
             this.lblShowStudentId.TabIndex = 25;
             this.lblShowStudentId.Text = "Show Student Number";
+            this.lblShowStudentId.Click += new System.EventHandler(this.lblShowStudentId_Click);
             // 
             // grpStudentDetails
             // 
             this.grpStudentDetails.Controls.Add(this.lblAddFname);
-            this.grpStudentDetails.Location = new System.Drawing.Point(13, 36);
+            this.grpStudentDetails.Location = new System.Drawing.Point(12, 47);
             this.grpStudentDetails.Name = "grpStudentDetails";
             this.grpStudentDetails.Size = new System.Drawing.Size(464, 399);
             this.grpStudentDetails.TabIndex = 27;
@@ -243,38 +244,23 @@
             this.grpCourseDetails.Controls.Add(this.lblLevel);
             this.grpCourseDetails.Controls.Add(this.cboAddCourse);
             this.grpCourseDetails.Controls.Add(this.lblCourse);
-            this.grpCourseDetails.Location = new System.Drawing.Point(525, 36);
+            this.grpCourseDetails.Location = new System.Drawing.Point(524, 47);
             this.grpCourseDetails.Name = "grpCourseDetails";
             this.grpCourseDetails.Size = new System.Drawing.Size(321, 255);
             this.grpCourseDetails.TabIndex = 28;
             this.grpCourseDetails.TabStop = false;
             this.grpCourseDetails.Text = "Course Details";
             // 
-            // lblCourse
+            // rdoPostgrad
             // 
-            this.lblCourse.AutoSize = true;
-            this.lblCourse.Location = new System.Drawing.Point(26, 69);
-            this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(60, 20);
-            this.lblCourse.TabIndex = 0;
-            this.lblCourse.Text = "Course";
-            // 
-            // cboAddCourse
-            // 
-            this.cboAddCourse.FormattingEnabled = true;
-            this.cboAddCourse.Location = new System.Drawing.Point(123, 70);
-            this.cboAddCourse.Name = "cboAddCourse";
-            this.cboAddCourse.Size = new System.Drawing.Size(192, 28);
-            this.cboAddCourse.TabIndex = 1;
-            // 
-            // lblLevel
-            // 
-            this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(30, 167);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(46, 20);
-            this.lblLevel.TabIndex = 2;
-            this.lblLevel.Text = "Level";
+            this.rdoPostgrad.AutoSize = true;
+            this.rdoPostgrad.Location = new System.Drawing.Point(123, 206);
+            this.rdoPostgrad.Name = "rdoPostgrad";
+            this.rdoPostgrad.Size = new System.Drawing.Size(130, 24);
+            this.rdoPostgrad.TabIndex = 4;
+            this.rdoPostgrad.TabStop = true;
+            this.rdoPostgrad.Text = "Postgraduate";
+            this.rdoPostgrad.UseVisualStyleBackColor = true;
             // 
             // rdoUndergrad
             // 
@@ -287,16 +273,31 @@
             this.rdoUndergrad.Text = "Undergraduate";
             this.rdoUndergrad.UseVisualStyleBackColor = true;
             // 
-            // rdoPostgrad
+            // lblLevel
             // 
-            this.rdoPostgrad.AutoSize = true;
-            this.rdoPostgrad.Location = new System.Drawing.Point(123, 206);
-            this.rdoPostgrad.Name = "rdoPostgrad";
-            this.rdoPostgrad.Size = new System.Drawing.Size(130, 24);
-            this.rdoPostgrad.TabIndex = 4;
-            this.rdoPostgrad.TabStop = true;
-            this.rdoPostgrad.Text = "Postgraduate";
-            this.rdoPostgrad.UseVisualStyleBackColor = true;
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(30, 167);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(46, 20);
+            this.lblLevel.TabIndex = 2;
+            this.lblLevel.Text = "Level";
+            // 
+            // cboAddCourse
+            // 
+            this.cboAddCourse.FormattingEnabled = true;
+            this.cboAddCourse.Location = new System.Drawing.Point(123, 70);
+            this.cboAddCourse.Name = "cboAddCourse";
+            this.cboAddCourse.Size = new System.Drawing.Size(192, 28);
+            this.cboAddCourse.TabIndex = 1;
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Location = new System.Drawing.Point(26, 69);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(60, 20);
+            this.lblCourse.TabIndex = 0;
+            this.lblCourse.Text = "Course";
             // 
             // AddStudent
             // 

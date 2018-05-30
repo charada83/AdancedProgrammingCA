@@ -33,11 +33,10 @@ namespace AdancedProgrammingCA
             string email = txtAddEmail.Text;
             string phone = txtAddPhone.Text;
 
-            // method to call from BIZ
             AddNewStudent addStu = new AddNewStudent(firstName, lastName, addressLine1, addressLine2, city, county, email, phone);
             addStu.AddStudentToDb();
 
-           CancelItems();
+            CancelItems();
 
             MessageBox.Show("Student added to database");
         }
@@ -59,9 +58,9 @@ namespace AdancedProgrammingCA
             txtAddPhone.Clear();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void lblShowStudentId_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

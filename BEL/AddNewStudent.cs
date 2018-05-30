@@ -9,7 +9,7 @@ using DAL;
 namespace BAL
 {
     public class AddNewStudent
-    {
+    {   
         AddData ad = new AddData();
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -19,6 +19,7 @@ namespace BAL
         public string County { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public int StudentId { get; }
 
         public AddNewStudent(string fname, string lname, string address1, string address2,  string city, string county, string email, string phone)
         {
@@ -35,6 +36,11 @@ namespace BAL
         public void AddStudentToDb()
         {
             ad.AddNewStudent(FirstName, LastName, AddressLine1, AddressLine2, City, County.ToString(), Email, Phone);
+        }
+
+        public void GetId(int id)
+        {
+            StudentId.ToString();
         }
 
     }
