@@ -16,11 +16,11 @@ namespace BAL
         public string AddressLine1 { get; set; }
         public string AddressLine2 { get; set; }
         public string City{ get; set; }
-        public Counties County { get; set; }
+        public string County { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
 
-        public AddNewStudent(string fname, string lname, string address1, string address2,  string city, Counties county, string email, string phone)
+        public AddNewStudent(string fname, string lname, string address1, string address2,  string city, string county, string email, string phone)
         {
             FirstName = fname;
             LastName = lname;

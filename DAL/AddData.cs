@@ -24,7 +24,7 @@ namespace DAL
 
         public void AddNewStudent(string FirstName, string LastName, string AddressLine1, string AddressLine2, string City, string County, string Email, string Phone)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO Customer (FirstName,LastName, AddressLine1, AddressLine2, City, County, Email, Phone) " +
+            SqlCommand cmd = new SqlCommand("INSERT INTO Student (FirstName,LastName, AddressLine1, AddressLine2, City, County, Email, Phone) " +
                 "VALUES (@fname, @lname, @address1, @address2, @city, @county, @email, @phone)", OpenCon());
             cmd.Parameters.AddWithValue("@fname", FirstName);
             cmd.Parameters.AddWithValue("@lname", LastName);
@@ -36,6 +36,16 @@ namespace DAL
             cmd.Parameters.AddWithValue("@phone", Phone);
             cmd.ExecuteNonQuery();
             CloseCon();
+        }
+
+        public void EditStudent()
+        {
+
+        }
+
+        public void DeleteStudent()
+        {
+
         }
     }
 }

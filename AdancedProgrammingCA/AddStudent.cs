@@ -18,7 +18,7 @@ namespace AdancedProgrammingCA
         {
             InitializeComponent();
             cboAddCounty.DataSource = Enum.GetValues(typeof(Counties));
-    
+            cboAddCounty.SelectedItem = "Select County";
             cboAddCourse.DataSource = Enum.GetValues(typeof(Courses));
         }
 
@@ -29,19 +29,17 @@ namespace AdancedProgrammingCA
             string addressLine1 = txtAddAddress1.Text;
             string addressLine2 = txtAddAddress2.Text;
             string city = txtAddCity.Text;
-           // Counties county = Enum.TryParse(cboAddCounty.SelectedValue.ToString(), out county);
+            string county = cboAddCounty.SelectedItem.ToString();
             string email = txtAddEmail.Text;
             string phone = txtAddPhone.Text;
-            string level = rdoPostgrad.ToString();
-           // Courses course = cboAddCourse.SelectedItem.ToString();
 
             // method to call from BIZ
-            //AddNewStudent addStu = new AddNewStudent(firstname, lastname, addressLine1, addessLine2);
-            //addStu.AddStudentToDb();
+            AddNewStudent addStu = new AddNewStudent(firstName, lastName, addressLine1, addressLine2, city, county, email, phone);
+            addStu.AddStudentToDb();
 
-           // CancelItems();
+           CancelItems();
 
-           // MessageBox.Show("Student added to database");
+            MessageBox.Show("Student added to database");
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)
@@ -59,6 +57,11 @@ namespace AdancedProgrammingCA
             cboAddCounty.SelectedItem = "";
             txtAddEmail.Clear();
             txtAddPhone.Clear();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
