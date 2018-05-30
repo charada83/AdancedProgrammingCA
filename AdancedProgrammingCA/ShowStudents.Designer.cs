@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblDisplay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -36,21 +37,31 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 65);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(716, 495);
+            this.dataGridView1.Size = new System.Drawing.Size(716, 463);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // lblDisplay
+            // 
+            this.lblDisplay.AutoSize = true;
+            this.lblDisplay.Location = new System.Drawing.Point(226, 79);
+            this.lblDisplay.Name = "lblDisplay";
+            this.lblDisplay.Size = new System.Drawing.Size(0, 20);
+            this.lblDisplay.TabIndex = 2;
             // 
             // ShowStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 528);
+            this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ShowStudents";
             this.Text = "Show Students";
             this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.lblDisplay, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -60,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblDisplay;
     }
 }

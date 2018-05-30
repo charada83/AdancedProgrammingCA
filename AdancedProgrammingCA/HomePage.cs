@@ -27,7 +27,7 @@ namespace AdancedProgrammingCA
 
             Login log = new Login(user, pass);
 
-            string status = log.CheckUserPass();
+            string status = log.Username;
 
             if (status == "no")
             {
@@ -35,15 +35,10 @@ namespace AdancedProgrammingCA
             }
             else
             {
+                MessageBox.Show("Welcome " + status);
+                this.Hide();
                 ShowStudents students = new ShowStudents();
                 students.Show();
-                //   lblDisplay.Text = "Welcome " + status;
-                //    txtUser.Enabled = false;
-                //    txtPass.Enabled = false;
-                //    label1.Enabled = false;
-                //    label2.Enabled = false;
-                //    btnLogin.Enabled = false;
-                //    btnReg.Enabled = false;
                 }
             }
 

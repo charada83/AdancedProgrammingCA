@@ -17,5 +17,16 @@ namespace AdancedProgrammingCA
             InitializeComponent();
         }
 
+        private void addStudentMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStudent addStu = new AddStudent();
+            addStu.Show();
+        }
+
+        private void editStudentMenuItem_Click(object sender, EventArgs e)
+        {
+            EditStudent editStu = new EditStudent();
+            editStu.Show();
+        }
     }
 }

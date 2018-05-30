@@ -1,4 +1,5 @@
-﻿using DAL;
+﻿using BAL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace AdancedProgrammingCA
         public ShowStudents()
         {
             InitializeComponent();
+            
         }
 
         private void btnLoad_Click(object sender, EventArgs e)

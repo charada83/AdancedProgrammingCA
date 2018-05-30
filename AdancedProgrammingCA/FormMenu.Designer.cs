@@ -96,12 +96,14 @@
             this.addStudentMenuItem.Name = "addStudentMenuItem";
             this.addStudentMenuItem.Size = new System.Drawing.Size(252, 30);
             this.addStudentMenuItem.Text = "Add Student";
+            this.addStudentMenuItem.Click += new System.EventHandler(this.addStudentMenuItem_Click);
             // 
             // editStudentMenuItem
             // 
             this.editStudentMenuItem.Name = "editStudentMenuItem";
             this.editStudentMenuItem.Size = new System.Drawing.Size(252, 30);
             this.editStudentMenuItem.Text = "Edit Student";
+            this.editStudentMenuItem.Click += new System.EventHandler(this.editStudentMenuItem_Click);
             // 
             // deleteStudentMenuItem
             // 

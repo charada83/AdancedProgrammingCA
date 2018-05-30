@@ -39,8 +39,8 @@
             this.lblAddLevel = new System.Windows.Forms.Label();
             this.lblAddCourse = new System.Windows.Forms.Label();
             this.lblAddStudentNo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddFname = new System.Windows.Forms.TextBox();
+            this.txtAddSname = new System.Windows.Forms.TextBox();
             this.txtAddEmail = new System.Windows.Forms.TextBox();
             this.txtAddPhone = new System.Windows.Forms.TextBox();
             this.txtAddAddress1 = new System.Windows.Forms.TextBox();
@@ -48,7 +48,7 @@
             this.txtAddCity = new System.Windows.Forms.TextBox();
             this.cboAddCounty = new System.Windows.Forms.ComboBox();
             this.rdoUnderGrad = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdoPostgrad = new System.Windows.Forms.RadioButton();
             this.cboAddCourse = new System.Windows.Forms.ComboBox();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.btnAddCancel = new System.Windows.Forms.Button();
@@ -154,19 +154,19 @@
             this.lblAddStudentNo.TabIndex = 11;
             this.lblAddStudentNo.Text = "Student Number";
             // 
-            // textBox1
+            // txtAddFname
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 26);
-            this.textBox1.TabIndex = 12;
+            this.txtAddFname.Location = new System.Drawing.Point(178, 65);
+            this.txtAddFname.Name = "txtAddFname";
+            this.txtAddFname.Size = new System.Drawing.Size(286, 26);
+            this.txtAddFname.TabIndex = 12;
             // 
-            // textBox2
+            // txtAddSname
             // 
-            this.textBox2.Location = new System.Drawing.Point(178, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(286, 26);
-            this.textBox2.TabIndex = 13;
+            this.txtAddSname.Location = new System.Drawing.Point(178, 103);
+            this.txtAddSname.Name = "txtAddSname";
+            this.txtAddSname.Size = new System.Drawing.Size(286, 26);
+            this.txtAddSname.TabIndex = 13;
             // 
             // txtAddEmail
             // 
@@ -222,16 +222,16 @@
             this.rdoUnderGrad.Text = "UnderGraduate";
             this.rdoUnderGrad.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoPostgrad
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(330, 391);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(134, 24);
-            this.radioButton2.TabIndex = 21;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "PostGraduate";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoPostgrad.AutoSize = true;
+            this.rdoPostgrad.Location = new System.Drawing.Point(330, 391);
+            this.rdoPostgrad.Name = "rdoPostgrad";
+            this.rdoPostgrad.Size = new System.Drawing.Size(134, 24);
+            this.rdoPostgrad.TabIndex = 21;
+            this.rdoPostgrad.TabStop = true;
+            this.rdoPostgrad.Text = "PostGraduate";
+            this.rdoPostgrad.UseVisualStyleBackColor = true;
             // 
             // cboAddCourse
             // 
@@ -249,6 +249,7 @@
             this.btnAddStudent.TabIndex = 23;
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // btnAddCancel
             // 
@@ -258,6 +259,7 @@
             this.btnAddCancel.TabIndex = 24;
             this.btnAddCancel.Text = "Cancel";
             this.btnAddCancel.UseVisualStyleBackColor = true;
+            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
             // 
             // lblShowStudentId
             // 
@@ -277,7 +279,7 @@
             this.Controls.Add(this.btnAddCancel);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.cboAddCourse);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.rdoPostgrad);
             this.Controls.Add(this.rdoUnderGrad);
             this.Controls.Add(this.cboAddCounty);
             this.Controls.Add(this.txtAddCity);
@@ -285,8 +287,8 @@
             this.Controls.Add(this.txtAddAddress1);
             this.Controls.Add(this.txtAddPhone);
             this.Controls.Add(this.txtAddEmail);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAddSname);
+            this.Controls.Add(this.txtAddFname);
             this.Controls.Add(this.lblAddStudentNo);
             this.Controls.Add(this.lblAddCourse);
             this.Controls.Add(this.lblAddLevel);
@@ -311,8 +313,8 @@
             this.Controls.SetChildIndex(this.lblAddLevel, 0);
             this.Controls.SetChildIndex(this.lblAddCourse, 0);
             this.Controls.SetChildIndex(this.lblAddStudentNo, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.txtAddFname, 0);
+            this.Controls.SetChildIndex(this.txtAddSname, 0);
             this.Controls.SetChildIndex(this.txtAddEmail, 0);
             this.Controls.SetChildIndex(this.txtAddPhone, 0);
             this.Controls.SetChildIndex(this.txtAddAddress1, 0);
@@ -320,7 +322,7 @@
             this.Controls.SetChildIndex(this.txtAddCity, 0);
             this.Controls.SetChildIndex(this.cboAddCounty, 0);
             this.Controls.SetChildIndex(this.rdoUnderGrad, 0);
-            this.Controls.SetChildIndex(this.radioButton2, 0);
+            this.Controls.SetChildIndex(this.rdoPostgrad, 0);
             this.Controls.SetChildIndex(this.cboAddCourse, 0);
             this.Controls.SetChildIndex(this.btnAddStudent, 0);
             this.Controls.SetChildIndex(this.btnAddCancel, 0);
@@ -343,8 +345,8 @@
         private System.Windows.Forms.Label lblAddLevel;
         private System.Windows.Forms.Label lblAddCourse;
         private System.Windows.Forms.Label lblAddStudentNo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddFname;
+        private System.Windows.Forms.TextBox txtAddSname;
         private System.Windows.Forms.TextBox txtAddEmail;
         private System.Windows.Forms.TextBox txtAddPhone;
         private System.Windows.Forms.TextBox txtAddAddress1;
@@ -352,7 +354,7 @@
         private System.Windows.Forms.TextBox txtAddCity;
         private System.Windows.Forms.ComboBox cboAddCounty;
         private System.Windows.Forms.RadioButton rdoUnderGrad;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdoPostgrad;
         private System.Windows.Forms.ComboBox cboAddCourse;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Button btnAddCancel;
