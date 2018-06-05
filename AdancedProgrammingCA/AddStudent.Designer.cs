@@ -233,7 +233,6 @@
             this.lblShowStudentId.Size = new System.Drawing.Size(170, 20);
             this.lblShowStudentId.TabIndex = 25;
             this.lblShowStudentId.Text = "Show Student Number";
-            this.lblShowStudentId.Click += new System.EventHandler(this.lblShowStudentId_Click);
             // 
             // grpStudentDetails
             // 
@@ -297,6 +296,7 @@
             this.cboAddCourse.Name = "cboAddCourse";
             this.cboAddCourse.Size = new System.Drawing.Size(192, 28);
             this.cboAddCourse.TabIndex = 1;
+            this.cboAddCourse.SelectedIndexChanged += new System.EventHandler(this.cboAddCourse_SelectedIndexChanged);
             // 
             // lblCourse
             // 

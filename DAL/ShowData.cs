@@ -20,5 +20,16 @@ namespace DAL
             dt.Load(rd);
             return dt;
         }
+
+        public DataTable GetCourses()
+        {
+            SqlCommand cmd = new SqlCommand("uspGetAllCourses", OpenCon());
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader rd = cmd.ExecuteReader();
+            dt.Load(rd);
+            return dt;
+        }
+
+
     }
 }

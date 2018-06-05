@@ -23,7 +23,7 @@ namespace DAL
             CloseCon();
         }
 
-        public void AddNewStudent(string FirstName, string LastName, string Email, string Phone, string AddressLine1, string AddressLine2, string City, string County)
+        public void AddNewStudent(string FirstName, string LastName, string Email, string Phone, string AddressLine1, string AddressLine2, string City, string County, int CourseId)
         {
             SqlCommand cmd = new SqlCommand("uspAddStudent", OpenCon());
             cmd.CommandType = CommandType.StoredProcedure;
@@ -35,7 +35,10 @@ namespace DAL
             cmd.Parameters.AddWithValue("@AddressLine2", AddressLine2);
             cmd.Parameters.AddWithValue("@City", City);
             cmd.Parameters.AddWithValue("@County", County);
-           
+            cmd.Parameters.AddWithValue("@CourseId", CourseId);
+      
+
+
             cmd.Parameters.AddWithValue("@StudentId", SqlDbType.Int).Direction = ParameterDirection.Output;
             cmd.ExecuteNonQuery();
 

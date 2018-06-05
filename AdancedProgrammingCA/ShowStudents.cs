@@ -15,8 +15,7 @@ namespace AdancedProgrammingCA
 {
     public partial class ShowStudents : FormMenu
     {
-        DAO dao = new DAO();
-        ShowData sd = new ShowData();
+
         public ShowStudents()
         {
             InitializeComponent();
@@ -25,9 +24,8 @@ namespace AdancedProgrammingCA
 
         private void ShowStudents_Load(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = sd.ShowStudents();
-            dgvStudents.DataSource = dt;    
+            ShowData sd = new ShowData();
+            dgvStudents.DataSource = sd.ShowStudents();
         }
     }
 }

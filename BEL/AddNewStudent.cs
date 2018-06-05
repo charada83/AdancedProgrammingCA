@@ -19,9 +19,11 @@ namespace BAL
         public string County { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public int StudentId { get; }
+        public int CourseId { get; set; }
+        public string StudentId { get; }
+        
 
-        public AddNewStudent(string fname, string lname, string address1, string address2,  string city, string county, string email, string phone)
+        public AddNewStudent(string fname, string lname, string address1, string address2,  string city, string county, string email, string phone, int courseId)
         {
             FirstName = fname;
             LastName = lname;
@@ -31,16 +33,18 @@ namespace BAL
             County = county;
             Email = email;
             Phone = phone;
+            CourseId = courseId;
+
         }
 
         public void AddStudentToDb()
         {
-            ad.AddNewStudent(FirstName, LastName, AddressLine1, AddressLine2, City, County.ToString(), Email, Phone);
+            ad.AddNewStudent(FirstName, LastName, AddressLine1, AddressLine2, City, County.ToString(), Email, Phone, CourseId);
         }
 
-        public void GetId(int id)
+        public void GetId()
         {
-            StudentId.ToString();
+            string id = StudentId.ToString();
         }
 
     }
