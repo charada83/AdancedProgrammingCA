@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.lblDisplay = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvStudents
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 65);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(716, 463);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvStudents.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvStudents.Location = new System.Drawing.Point(0, 33);
+            this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.RowTemplate.Height = 28;
+            this.dgvStudents.Size = new System.Drawing.Size(1051, 495);
+            this.dgvStudents.TabIndex = 1;
             // 
             // lblDisplay
             // 
@@ -55,14 +56,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 528);
+            this.ClientSize = new System.Drawing.Size(1051, 528);
             this.Controls.Add(this.lblDisplay);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvStudents);
             this.Name = "ShowStudents";
-            this.Text = "Show Students";
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Text = "All Student Records";
+            this.Load += new System.EventHandler(this.ShowStudents_Load);
+            this.Controls.SetChildIndex(this.dgvStudents, 0);
             this.Controls.SetChildIndex(this.lblDisplay, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,7 +72,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStudents;
         private System.Windows.Forms.Label lblDisplay;
     }
 }

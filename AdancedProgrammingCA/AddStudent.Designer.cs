@@ -55,6 +55,14 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.cboAddCourse = new System.Windows.Forms.ComboBox();
             this.lblCourse = new System.Windows.Forms.Label();
+            this.lblValidFname = new System.Windows.Forms.Label();
+            this.lblValidSname = new System.Windows.Forms.Label();
+            this.lblValidEmail = new System.Windows.Forms.Label();
+            this.lblValidPhone = new System.Windows.Forms.Label();
+            this.lblValidAddress1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblValidCity = new System.Windows.Forms.Label();
+            this.lblValidCounty = new System.Windows.Forms.Label();
             this.grpStudentDetails.SuspendLayout();
             this.grpCourseDetails.SuspendLayout();
             this.SuspendLayout();
@@ -244,7 +252,7 @@
             this.grpCourseDetails.Controls.Add(this.lblLevel);
             this.grpCourseDetails.Controls.Add(this.cboAddCourse);
             this.grpCourseDetails.Controls.Add(this.lblCourse);
-            this.grpCourseDetails.Location = new System.Drawing.Point(524, 47);
+            this.grpCourseDetails.Location = new System.Drawing.Point(694, 47);
             this.grpCourseDetails.Name = "grpCourseDetails";
             this.grpCourseDetails.Size = new System.Drawing.Size(321, 255);
             this.grpCourseDetails.TabIndex = 28;
@@ -299,11 +307,91 @@
             this.lblCourse.TabIndex = 0;
             this.lblCourse.Text = "Course";
             // 
+            // lblValidFname
+            // 
+            this.lblValidFname.AutoSize = true;
+            this.lblValidFname.Location = new System.Drawing.Point(483, 68);
+            this.lblValidFname.Name = "lblValidFname";
+            this.lblValidFname.Size = new System.Drawing.Size(51, 20);
+            this.lblValidFname.TabIndex = 29;
+            this.lblValidFname.Text = "label1";
+            // 
+            // lblValidSname
+            // 
+            this.lblValidSname.AutoSize = true;
+            this.lblValidSname.Location = new System.Drawing.Point(482, 106);
+            this.lblValidSname.Name = "lblValidSname";
+            this.lblValidSname.Size = new System.Drawing.Size(51, 20);
+            this.lblValidSname.TabIndex = 30;
+            this.lblValidSname.Text = "label2";
+            // 
+            // lblValidEmail
+            // 
+            this.lblValidEmail.AutoSize = true;
+            this.lblValidEmail.Location = new System.Drawing.Point(482, 142);
+            this.lblValidEmail.Name = "lblValidEmail";
+            this.lblValidEmail.Size = new System.Drawing.Size(51, 20);
+            this.lblValidEmail.TabIndex = 31;
+            this.lblValidEmail.Text = "label3";
+            // 
+            // lblValidPhone
+            // 
+            this.lblValidPhone.AutoSize = true;
+            this.lblValidPhone.Location = new System.Drawing.Point(482, 182);
+            this.lblValidPhone.Name = "lblValidPhone";
+            this.lblValidPhone.Size = new System.Drawing.Size(51, 20);
+            this.lblValidPhone.TabIndex = 32;
+            this.lblValidPhone.Text = "label4";
+            // 
+            // lblValidAddress1
+            // 
+            this.lblValidAddress1.AutoSize = true;
+            this.lblValidAddress1.Location = new System.Drawing.Point(483, 224);
+            this.lblValidAddress1.Name = "lblValidAddress1";
+            this.lblValidAddress1.Size = new System.Drawing.Size(51, 20);
+            this.lblValidAddress1.TabIndex = 33;
+            this.lblValidAddress1.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(483, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "label6";
+            // 
+            // lblValidCity
+            // 
+            this.lblValidCity.AutoSize = true;
+            this.lblValidCity.Location = new System.Drawing.Point(482, 313);
+            this.lblValidCity.Name = "lblValidCity";
+            this.lblValidCity.Size = new System.Drawing.Size(51, 20);
+            this.lblValidCity.TabIndex = 35;
+            this.lblValidCity.Text = "label7";
+            // 
+            // lblValidCounty
+            // 
+            this.lblValidCounty.AutoSize = true;
+            this.lblValidCounty.Location = new System.Drawing.Point(482, 350);
+            this.lblValidCounty.Name = "lblValidCounty";
+            this.lblValidCounty.Size = new System.Drawing.Size(51, 20);
+            this.lblValidCounty.TabIndex = 36;
+            this.lblValidCounty.Text = "label8";
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 629);
+            this.ClientSize = new System.Drawing.Size(1037, 629);
+            this.Controls.Add(this.lblValidCounty);
+            this.Controls.Add(this.lblValidCity);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblValidAddress1);
+            this.Controls.Add(this.lblValidPhone);
+            this.Controls.Add(this.lblValidEmail);
+            this.Controls.Add(this.lblValidSname);
+            this.Controls.Add(this.lblValidFname);
             this.Controls.Add(this.grpCourseDetails);
             this.Controls.Add(this.lblShowStudentId);
             this.Controls.Add(this.btnAddCancel);
@@ -348,6 +436,14 @@
             this.Controls.SetChildIndex(this.btnAddCancel, 0);
             this.Controls.SetChildIndex(this.lblShowStudentId, 0);
             this.Controls.SetChildIndex(this.grpCourseDetails, 0);
+            this.Controls.SetChildIndex(this.lblValidFname, 0);
+            this.Controls.SetChildIndex(this.lblValidSname, 0);
+            this.Controls.SetChildIndex(this.lblValidEmail, 0);
+            this.Controls.SetChildIndex(this.lblValidPhone, 0);
+            this.Controls.SetChildIndex(this.lblValidAddress1, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.lblValidCity, 0);
+            this.Controls.SetChildIndex(this.lblValidCounty, 0);
             this.grpStudentDetails.ResumeLayout(false);
             this.grpStudentDetails.PerformLayout();
             this.grpCourseDetails.ResumeLayout(false);
@@ -386,5 +482,13 @@
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.ComboBox cboAddCourse;
         private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label lblValidFname;
+        private System.Windows.Forms.Label lblValidSname;
+        private System.Windows.Forms.Label lblValidEmail;
+        private System.Windows.Forms.Label lblValidPhone;
+        private System.Windows.Forms.Label lblValidAddress1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblValidCity;
+        private System.Windows.Forms.Label lblValidCounty;
     }
 }

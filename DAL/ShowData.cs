@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class ShowData:DAO
+    public class ShowData:DAO
     {
         DataTable dt = new DataTable();
 
         public DataTable ShowStudents()
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Students", OpenCon());
+            SqlCommand cmd = new SqlCommand("uspGetAllStudents", OpenCon());
+            cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader rd = cmd.ExecuteReader();
             dt.Load(rd);
             return dt;

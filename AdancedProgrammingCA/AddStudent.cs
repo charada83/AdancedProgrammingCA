@@ -1,5 +1,6 @@
-﻿using BAL;
+﻿
 using BAL.Enums;
+using BAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,8 +13,10 @@ using System.Windows.Forms;
 
 namespace AdancedProgrammingCA
 {
+    
     public partial class AddStudent : FormMenu
     {
+        
         public AddStudent()
         {
             InitializeComponent();
@@ -24,6 +27,15 @@ namespace AdancedProgrammingCA
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            //if (RegexValidation.checkEmail(txtAddEmail.Text.ToString()))
+            //{
+            //    lblValidEmail.Text = "Email Valid";
+            //}
+            //else
+            //{
+            //    lblValidEmail.Text = "Invalid Email";
+            //}
+
             string firstName = txtAddFname.Text;
             string lastName = txtAddSname.Text;
             string addressLine1 = txtAddAddress1.Text;
@@ -60,7 +72,21 @@ namespace AdancedProgrammingCA
 
         private void lblShowStudentId_Click(object sender, EventArgs e)
         {
-           
+
         }
+
+       public void Validation(string re, TextBox txt, Label lbl)
+        {
+
+        }
+        //public int validation()
+        //{
+        //    int flag = 0;
+        //    if (txtAddFname.Text == "" || txtAddSname.Text =="")
+        //    {
+                
+        //    }
+        //}
+
     }
 }

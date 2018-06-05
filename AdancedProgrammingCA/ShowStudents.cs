@@ -16,27 +16,18 @@ namespace AdancedProgrammingCA
     public partial class ShowStudents : FormMenu
     {
         DAO dao = new DAO();
+        ShowData sd = new ShowData();
         public ShowStudents()
         {
             InitializeComponent();
-            
+
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void ShowStudents_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Student", dao.OpenCon());
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            //Add Datagrid to Show Students
-            while (dr.Read())
-            {
-                ListViewItem stu = new ListViewItem(dr["StudentId"].ToString());
-                stu.SubItems.Add(dr["FirstName" + "LastName"].ToString());
-                stu.SubItems.Add(dr["AddressLine1" + "AddressLine2" + "City" + "County"].ToString());
-                
-                //myList.Items.Add(stu);
-            }
-            dao.CloseCon();
+            DataTable dt = new DataTable();
+            dt = sd.ShowStudents();
+            dgvStudents.DataSource = dt;    
         }
     }
 }

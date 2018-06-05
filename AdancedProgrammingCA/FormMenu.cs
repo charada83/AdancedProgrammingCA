@@ -19,14 +19,30 @@ namespace AdancedProgrammingCA
 
         private void addStudentMenuItem_Click(object sender, EventArgs e)
         {
-            AddStudent addStu = new AddStudent();
-            addStu.Show();
+            bool formOpen = false;
+
+            for (int i = 0; i < Application.OpenForms.Count; i++)
+            {
+                Form current = Application.OpenForms[i];
+                if (current.Name == "AddStudent")
+                {
+                    current.BringToFront();
+                    formOpen = true;
+                }
+            }
+            if (!formOpen)
+            {
+                AddStudent form = new AddStudent();
+                form.Name = "AddStudent";
+                form.Show();
+            }
         }
+            
 
         private void editStudentMenuItem_Click(object sender, EventArgs e)
         {
             EditStudent editStu = new EditStudent();
-            editStu.Show();
+            editStu.ShowDialog();
         }
     }
 }

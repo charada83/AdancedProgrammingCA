@@ -43,14 +43,6 @@ namespace DAL
             CloseCon();
         }   
 
-        public void EditStudent()
-        {
-
-        }
-
-        public void DeleteStudent()
-        {
-
-        }
+        
     }
 }
