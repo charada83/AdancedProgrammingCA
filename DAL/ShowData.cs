@@ -30,6 +30,9 @@ namespace DAL
             return dt;
         }
 
-
+        public int getCourseID(string level, string courseTitle)
+        {
+            return 2;
+        }
     }
 }

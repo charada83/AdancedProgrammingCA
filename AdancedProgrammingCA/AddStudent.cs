@@ -25,8 +25,8 @@ namespace AdancedProgrammingCA
             InitializeComponent();
             cboAddCounty.DataSource = Enum.GetValues(typeof(Counties));
             cboAddCounty.SelectedItem = "Select County";
-            //cboAddCourse.DataSource = Enum.GetValues(typeof(Courses));
-            cboAddCourse.DataSource = sd.GetCourses();
+            cboAddCourse.DataSource = Enum.GetValues(typeof(Courses));
+            //cboAddCourse.DataSource = sd.GetCourses();
         }
 
         //public void FillCourseCombo()
@@ -56,9 +56,12 @@ namespace AdancedProgrammingCA
             string county = cboAddCounty.SelectedItem.ToString();
             string email = txtAddEmail.Text;
             string phone = txtAddPhone.Text;
-            int courseId = int.Parse(cboAddCourse.ValueMember);
+            //int courseId = 1;
             string courseTitle = cboAddCourse.SelectedValue.ToString();
             string level = LevelChoice();
+
+            int courseId = sd.getCourseID(level, courseTitle);
+            
 
             AddNewStudent addStu = new AddNewStudent(firstName, lastName, addressLine1, addressLine2, city, county, email, phone, courseId);
             addStu.AddStudentToDb();
@@ -107,8 +110,11 @@ namespace AdancedProgrammingCA
         private void cboAddCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            cboAddCourse.DisplayMember = "CourseTitle";
-            cboAddCourse.ValueMember = "CourseId";
+           // cboAddCourse.DisplayMember = "CourseTitle";
+           // cboAddCourse.ValueMember = "CourseId";
+
+           // e.dropdown.value 
+             //   e.radion.selected 
             
         }
     }
