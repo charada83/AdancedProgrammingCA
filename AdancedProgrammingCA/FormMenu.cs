@@ -44,5 +44,22 @@ namespace AdancedProgrammingCA
             EditStudent editStu = new EditStudent();
             editStu.ShowDialog();
         }
+
+        private void deleteStudentMenuItem_Click(object sender, EventArgs e)
+        {
+            EditStudent deleteStu = new EditStudent();
+            deleteStu.ShowDialog();
+        }
+
+        private void databaseHistoryMenuItem_Click(object sender, EventArgs e)
+        {
+            //DatabaseHistory history = new DatabaseHistory();
+            //history.ShowDialog();
+        }
+
+        private void exitLoginMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

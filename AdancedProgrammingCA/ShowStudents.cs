@@ -26,6 +26,21 @@ namespace AdancedProgrammingCA
         {
             ShowData sd = new ShowData();
             dgvStudents.DataSource = sd.ShowStudents();
+                   
         }
+
+        //private AddNewStudent GetSelectedStudent()
+        //{
+        //    AddNewStudent student = null;
+        //    int studentId;
+        //    int columnIndex = 0;
+        //    int rowIndex = 0;
+        //    if (dgvStudents.SelectedRows.Count > 0)
+        //    {
+        //        rowIndex = dgvStudents.SelectedRows[0].Index;
+        //        studentId = (int)dgvStudents.Rows[rowIndex].Cells[columnIndex].Value;
+        //    }
+
+        //}
     }
 }

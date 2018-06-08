@@ -68,11 +68,12 @@
             this.exitLoginMenuItem.Name = "exitLoginMenuItem";
             this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
             this.exitLoginMenuItem.Text = "&Exit Application";
+            this.exitLoginMenuItem.Click += new System.EventHandler(this.exitLoginMenuItem_Click);
             // 
             // registerMenuItem
             // 
             this.registerMenuItem.Name = "registerMenuItem";
-            this.registerMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.registerMenuItem.Size = new System.Drawing.Size(218, 30);
             this.registerMenuItem.Text = " ";
             // 
             // studentMenuItem
@@ -104,6 +105,7 @@
             this.deleteStudentMenuItem.Name = "deleteStudentMenuItem";
             this.deleteStudentMenuItem.Size = new System.Drawing.Size(252, 30);
             this.deleteStudentMenuItem.Text = "Delete Student";
+            this.deleteStudentMenuItem.Click += new System.EventHandler(this.deleteStudentMenuItem_Click);
             // 
             // viewMenuItem
             // 
@@ -118,6 +120,7 @@
             this.databaseHistoryMenuItem.Name = "databaseHistoryMenuItem";
             this.databaseHistoryMenuItem.Size = new System.Drawing.Size(252, 30);
             this.databaseHistoryMenuItem.Text = "Database History";
+            this.databaseHistoryMenuItem.Click += new System.EventHandler(this.databaseHistoryMenuItem_Click);
             // 
             // FormMenu
             // 

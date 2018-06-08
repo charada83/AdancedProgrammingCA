@@ -14,8 +14,8 @@ using DAL;
 
 namespace AdancedProgrammingCA
 {
-    
-    public partial class AddStudent : FormMenu
+
+   public partial class AddStudent : FormMenu
     {
         DAO dao = new DAO();
         ShowData sd = new ShowData();
@@ -27,6 +27,7 @@ namespace AdancedProgrammingCA
             cboAddCounty.SelectedItem = "Select County";
             cboAddCourse.DataSource = Enum.GetValues(typeof(Courses));
             //cboAddCourse.DataSource = sd.GetCourses();
+
         }
 
         //public void FillCourseCombo()
@@ -70,7 +71,6 @@ namespace AdancedProgrammingCA
 
             MessageBox.Show("Student added to database");
 
-            
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)
