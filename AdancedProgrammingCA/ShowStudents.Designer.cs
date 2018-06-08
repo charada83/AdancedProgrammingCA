@@ -60,7 +60,9 @@
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.dgvStudents);
             this.Name = "ShowStudents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "All Student Records";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ShowStudents_Load);
             this.Controls.SetChildIndex(this.dgvStudents, 0);
             this.Controls.SetChildIndex(this.lblDisplay, 0);

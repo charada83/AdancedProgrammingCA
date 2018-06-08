@@ -37,8 +37,6 @@ namespace DAL
             cmd.Parameters.AddWithValue("@County", County);
             cmd.Parameters.AddWithValue("@CourseId", CourseId);
       
-
-
             cmd.Parameters.AddWithValue("@StudentId", SqlDbType.Int).Direction = ParameterDirection.Output;
             cmd.ExecuteNonQuery();
 

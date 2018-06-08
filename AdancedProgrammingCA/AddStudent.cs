@@ -63,11 +63,6 @@ namespace AdancedProgrammingCA
             AddNewStudent addStu = new AddNewStudent(firstName, lastName, addressLine1, addressLine2, city, county, email, phone, courseId);
             addStu.AddStudentToDb();
 
-            
-            //DataTable dt = new DataTable();
-            //dt = sd.ShowStudents();
-            //dt.Columns[0] = lblShowStudentId.Text;
-
             CancelItems();
 
             MessageBox.Show("Student added to database");

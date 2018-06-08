@@ -142,7 +142,7 @@
             // lblAddStudentNo
             // 
             this.lblAddStudentNo.AutoSize = true;
-            this.lblAddStudentNo.Location = new System.Drawing.Point(263, 537);
+            this.lblAddStudentNo.Location = new System.Drawing.Point(316, 537);
             this.lblAddStudentNo.Name = "lblAddStudentNo";
             this.lblAddStudentNo.Size = new System.Drawing.Size(126, 20);
             this.lblAddStudentNo.TabIndex = 11;
@@ -207,7 +207,7 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(86, 452);
+            this.btnAddStudent.Location = new System.Drawing.Point(309, 452);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(133, 54);
             this.btnAddStudent.TabIndex = 23;
@@ -217,7 +217,7 @@
             // 
             // btnAddCancel
             // 
-            this.btnAddCancel.Location = new System.Drawing.Point(256, 452);
+            this.btnAddCancel.Location = new System.Drawing.Point(553, 452);
             this.btnAddCancel.Name = "btnAddCancel";
             this.btnAddCancel.Size = new System.Drawing.Size(133, 54);
             this.btnAddCancel.TabIndex = 24;
@@ -228,7 +228,7 @@
             // lblShowStudentId
             // 
             this.lblShowStudentId.AutoSize = true;
-            this.lblShowStudentId.Location = new System.Drawing.Point(419, 537);
+            this.lblShowStudentId.Location = new System.Drawing.Point(516, 537);
             this.lblShowStudentId.Name = "lblShowStudentId";
             this.lblShowStudentId.Size = new System.Drawing.Size(170, 20);
             this.lblShowStudentId.TabIndex = 25;
@@ -251,7 +251,7 @@
             this.grpCourseDetails.Controls.Add(this.lblLevel);
             this.grpCourseDetails.Controls.Add(this.cboAddCourse);
             this.grpCourseDetails.Controls.Add(this.lblCourse);
-            this.grpCourseDetails.Location = new System.Drawing.Point(694, 47);
+            this.grpCourseDetails.Location = new System.Drawing.Point(672, 47);
             this.grpCourseDetails.Name = "grpCourseDetails";
             this.grpCourseDetails.Size = new System.Drawing.Size(321, 255);
             this.grpCourseDetails.TabIndex = 28;

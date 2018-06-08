@@ -16,5 +16,34 @@ namespace AdancedProgrammingCA
         {
             InitializeComponent();
         }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAddCancel_Click(object sender, EventArgs e)
+        {
+            CancelItems();
+        }
+
+        public void CancelItems()
+        {
+            txtEditFname.Clear();
+            txtEditSname.Clear();
+            txtEditAddress1.Clear();
+            txtEditAddress2.Clear();
+            txtEditCity.Clear();
+            cboEditCounty.SelectedItem = "";
+            txtEditEmail.Clear();
+            txtEditPhone.Clear();
+        }
+
+        private void EditStudent_Load(object sender, EventArgs e)
+        {
+            txtEditFname.Enabled = false;
+            txtEditSname.Enabled = false;
+            grpCourseDetails.Enabled = false;
+        }
     }
 }
