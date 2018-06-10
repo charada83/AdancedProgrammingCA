@@ -23,6 +23,11 @@ namespace AdancedProgrammingCA
 
         }
 
+        public int GetCurrentStudentId()
+        {
+            return (int)dgvStudents.CurrentRow.Cells[0].Value;
+        }
+
         public void RefreshGrid()
         {
     

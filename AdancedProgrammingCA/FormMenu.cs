@@ -44,7 +44,8 @@ namespace AdancedProgrammingCA
 
         private void editStudentMenuItem_Click(object sender, EventArgs e)
         {
-            
+            // AddStudent.MY_PROPERTY = 12;
+            int studentId = Program.SHOW_STUDENTS.GetCurrentStudentId();
             EditStudent editStu = new EditStudent();
             editStu.ShowDialog();
         }
