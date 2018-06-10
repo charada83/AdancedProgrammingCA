@@ -15,6 +15,7 @@ namespace AdancedProgrammingCA
 {
     public partial class ShowStudents : FormMenu
     {
+        ShowData sd = new ShowData();
 
         public ShowStudents()
         {
@@ -22,11 +23,26 @@ namespace AdancedProgrammingCA
 
         }
 
+        public void RefreshGrid()
+        {
+    
+            dgvStudents.DataSource = sd.ShowStudents();
+            
+        }
+
         private void ShowStudents_Load(object sender, EventArgs e)
         {
-            ShowData sd = new ShowData();
-            dgvStudents.DataSource = sd.ShowStudents();
-                   
+            
+            Program.GRID = dgvStudents;
+            Program.SHOW_STUDENTS = this;
+            this.RefreshGrid();
+
+        }
+
+        private void dgvStudents_Click(object sender, EventArgs e)
+        {
+            EditStudent edit = new EditStudent();
+            
         }
 
         //private AddNewStudent GetSelectedStudent()
@@ -39,8 +55,20 @@ namespace AdancedProgrammingCA
         //    {
         //        rowIndex = dgvStudents.SelectedRows[0].Index;
         //        studentId = (int)dgvStudents.Rows[rowIndex].Cells[columnIndex].Value;
+
+        //        for (int rows = 0; rows < dgvStudents.Rows.Count; rows++)
+        //        {
+        //            if (dgvStudents. studentId)
+        //            {
+        //                student = dgvStudents[rows];
+        //                break;
+        //            }
+        //        }
+        //        return student;
         //    }
 
-        //}
+
+
+    //}
     }
 }

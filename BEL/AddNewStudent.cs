@@ -37,6 +37,7 @@ namespace BAL
 
         }
 
+
         public void AddStudentToDb()
         {
             ad.AddNewStudent(FirstName, LastName, AddressLine1, AddressLine2, City, County.ToString(), Email, Phone, CourseId);

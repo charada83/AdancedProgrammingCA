@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,15 @@ namespace AdancedProgrammingCA
 {
     public partial class EditStudent : FormMenu
     {
+        EditRemoveData edit = new EditRemoveData();
+
         public EditStudent()
         {
             InitializeComponent();
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void btnAddCancel_Click(object sender, EventArgs e)
+        private void btnEditCancel_Click(object sender, EventArgs e)
         {
             CancelItems();
         }

@@ -43,6 +43,7 @@
             this.dgvStudents.RowTemplate.Height = 28;
             this.dgvStudents.Size = new System.Drawing.Size(1051, 495);
             this.dgvStudents.TabIndex = 1;
+            this.dgvStudents.Click += new System.EventHandler(this.dgvStudents_Click);
             // 
             // lblDisplay
             // 

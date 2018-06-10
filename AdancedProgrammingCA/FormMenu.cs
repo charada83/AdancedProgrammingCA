@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace AdancedProgrammingCA
 {
     public partial class FormMenu : Form
     {
+        
+
         public FormMenu()
         {
             InitializeComponent();
@@ -41,6 +44,7 @@ namespace AdancedProgrammingCA
 
         private void editStudentMenuItem_Click(object sender, EventArgs e)
         {
+            
             EditStudent editStu = new EditStudent();
             editStu.ShowDialog();
         }

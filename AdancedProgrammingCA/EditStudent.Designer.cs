@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblValidCounty = new System.Windows.Forms.Label();
-            this.lblValidCity = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblValidAddress1 = new System.Windows.Forms.Label();
-            this.lblValidPhone = new System.Windows.Forms.Label();
-            this.lblValidEmail = new System.Windows.Forms.Label();
-            this.lblValidSname = new System.Windows.Forms.Label();
-            this.lblValidFname = new System.Windows.Forms.Label();
             this.grpCourseDetails = new System.Windows.Forms.GroupBox();
             this.rdoPostgrad = new System.Windows.Forms.RadioButton();
             this.rdoUndergrad = new System.Windows.Forms.RadioButton();
             this.lblLevel = new System.Windows.Forms.Label();
             this.cboEditCourse = new System.Windows.Forms.ComboBox();
             this.lblCourse = new System.Windows.Forms.Label();
-            this.btnAddCancel = new System.Windows.Forms.Button();
+            this.btnEditCancel = new System.Windows.Forms.Button();
             this.btnEditStudent = new System.Windows.Forms.Button();
             this.cboEditCounty = new System.Windows.Forms.ComboBox();
             this.txtEditCity = new System.Windows.Forms.TextBox();
@@ -60,86 +52,18 @@
             this.lblAddEmail = new System.Windows.Forms.Label();
             this.lblAddSname = new System.Windows.Forms.Label();
             this.grpStudentDetails = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblValidFname = new System.Windows.Forms.Label();
             this.lblAddFname = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.lblSearchStudent = new System.Windows.Forms.Label();
             this.txtSearchStudent = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.grpCourseDetails.SuspendLayout();
             this.grpStudentDetails.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblValidCounty
-            // 
-            this.lblValidCounty.AutoSize = true;
-            this.lblValidCounty.Location = new System.Drawing.Point(438, 354);
-            this.lblValidCounty.Name = "lblValidCounty";
-            this.lblValidCounty.Size = new System.Drawing.Size(51, 20);
-            this.lblValidCounty.TabIndex = 65;
-            this.lblValidCounty.Text = "label8";
-            // 
-            // lblValidCity
-            // 
-            this.lblValidCity.AutoSize = true;
-            this.lblValidCity.Location = new System.Drawing.Point(438, 310);
-            this.lblValidCity.Name = "lblValidCity";
-            this.lblValidCity.Size = new System.Drawing.Size(51, 20);
-            this.lblValidCity.TabIndex = 64;
-            this.lblValidCity.Text = "label7";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(439, 269);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "label6";
-            // 
-            // lblValidAddress1
-            // 
-            this.lblValidAddress1.AutoSize = true;
-            this.lblValidAddress1.Location = new System.Drawing.Point(438, 222);
-            this.lblValidAddress1.Name = "lblValidAddress1";
-            this.lblValidAddress1.Size = new System.Drawing.Size(51, 20);
-            this.lblValidAddress1.TabIndex = 62;
-            this.lblValidAddress1.Text = "label5";
-            // 
-            // lblValidPhone
-            // 
-            this.lblValidPhone.AutoSize = true;
-            this.lblValidPhone.Location = new System.Drawing.Point(438, 178);
-            this.lblValidPhone.Name = "lblValidPhone";
-            this.lblValidPhone.Size = new System.Drawing.Size(51, 20);
-            this.lblValidPhone.TabIndex = 61;
-            this.lblValidPhone.Text = "label4";
-            // 
-            // lblValidEmail
-            // 
-            this.lblValidEmail.AutoSize = true;
-            this.lblValidEmail.Location = new System.Drawing.Point(438, 136);
-            this.lblValidEmail.Name = "lblValidEmail";
-            this.lblValidEmail.Size = new System.Drawing.Size(51, 20);
-            this.lblValidEmail.TabIndex = 60;
-            this.lblValidEmail.Text = "label3";
-            // 
-            // lblValidSname
-            // 
-            this.lblValidSname.AutoSize = true;
-            this.lblValidSname.Location = new System.Drawing.Point(438, 87);
-            this.lblValidSname.Name = "lblValidSname";
-            this.lblValidSname.Size = new System.Drawing.Size(51, 20);
-            this.lblValidSname.TabIndex = 59;
-            this.lblValidSname.Text = "label2";
-            // 
-            // lblValidFname
-            // 
-            this.lblValidFname.AutoSize = true;
-            this.lblValidFname.Location = new System.Drawing.Point(438, 39);
-            this.lblValidFname.Name = "lblValidFname";
-            this.lblValidFname.Size = new System.Drawing.Size(51, 20);
-            this.lblValidFname.TabIndex = 58;
-            this.lblValidFname.Text = "label1";
             // 
             // grpCourseDetails
             // 
@@ -203,15 +127,15 @@
             this.lblCourse.TabIndex = 0;
             this.lblCourse.Text = "Course";
             // 
-            // btnAddCancel
+            // btnEditCancel
             // 
-            this.btnAddCancel.Location = new System.Drawing.Point(617, 536);
-            this.btnAddCancel.Name = "btnAddCancel";
-            this.btnAddCancel.Size = new System.Drawing.Size(133, 54);
-            this.btnAddCancel.TabIndex = 54;
-            this.btnAddCancel.Text = "Cancel";
-            this.btnAddCancel.UseVisualStyleBackColor = true;
-            this.btnAddCancel.Click += new System.EventHandler(this.btnAddCancel_Click);
+            this.btnEditCancel.Location = new System.Drawing.Point(617, 536);
+            this.btnEditCancel.Name = "btnEditCancel";
+            this.btnEditCancel.Size = new System.Drawing.Size(133, 54);
+            this.btnEditCancel.TabIndex = 54;
+            this.btnEditCancel.Text = "Cancel";
+            this.btnEditCancel.UseVisualStyleBackColor = true;
+            this.btnEditCancel.Click += new System.EventHandler(this.btnEditCancel_Click);
             // 
             // btnEditStudent
             // 
@@ -221,7 +145,6 @@
             this.btnEditStudent.TabIndex = 53;
             this.btnEditStudent.Text = "Edit Student";
             this.btnEditStudent.UseVisualStyleBackColor = true;
-            this.btnEditStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // cboEditCounty
             // 
@@ -345,14 +268,10 @@
             // 
             // grpStudentDetails
             // 
+            this.grpStudentDetails.Controls.Add(this.label3);
+            this.grpStudentDetails.Controls.Add(this.label2);
+            this.grpStudentDetails.Controls.Add(this.label1);
             this.grpStudentDetails.Controls.Add(this.lblValidFname);
-            this.grpStudentDetails.Controls.Add(this.lblValidSname);
-            this.grpStudentDetails.Controls.Add(this.lblValidEmail);
-            this.grpStudentDetails.Controls.Add(this.lblValidPhone);
-            this.grpStudentDetails.Controls.Add(this.lblValidAddress1);
-            this.grpStudentDetails.Controls.Add(this.label6);
-            this.grpStudentDetails.Controls.Add(this.lblValidCity);
-            this.grpStudentDetails.Controls.Add(this.lblValidCounty);
             this.grpStudentDetails.Controls.Add(this.lblAddFname);
             this.grpStudentDetails.Controls.Add(this.lblAddCounty);
             this.grpStudentDetails.Controls.Add(this.cboEditCounty);
@@ -376,6 +295,46 @@
             this.grpStudentDetails.TabStop = false;
             this.grpStudentDetails.Text = "Personal Details";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(438, 310);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.TabIndex = 69;
+            this.label3.Text = "*Required";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(438, 354);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "*Required";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(438, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "*Required";
+            // 
+            // lblValidFname
+            // 
+            this.lblValidFname.AutoSize = true;
+            this.lblValidFname.ForeColor = System.Drawing.Color.Red;
+            this.lblValidFname.Location = new System.Drawing.Point(438, 136);
+            this.lblValidFname.Name = "lblValidFname";
+            this.lblValidFname.Size = new System.Drawing.Size(80, 20);
+            this.lblValidFname.TabIndex = 66;
+            this.lblValidFname.Text = "*Required";
+            // 
             // lblAddFname
             // 
             this.lblAddFname.AutoSize = true;
@@ -385,14 +344,14 @@
             this.lblAddFname.TabIndex = 1;
             this.lblAddFname.Text = "First Name";
             // 
-            // button1
+            // btnDeleteStudent
             // 
-            this.button1.Location = new System.Drawing.Point(430, 536);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 54);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Delete Student";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(430, 536);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(133, 54);
+            this.btnDeleteStudent.TabIndex = 58;
+            this.btnDeleteStudent.Text = "Delete Student";
+            this.btnDeleteStudent.UseVisualStyleBackColor = true;
             // 
             // lblSearchStudent
             // 
@@ -427,9 +386,9 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearchStudent);
             this.Controls.Add(this.lblSearchStudent);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.grpCourseDetails);
-            this.Controls.Add(this.btnAddCancel);
+            this.Controls.Add(this.btnEditCancel);
             this.Controls.Add(this.btnEditStudent);
             this.Controls.Add(this.grpStudentDetails);
             this.Name = "EditStudent";
@@ -437,9 +396,9 @@
             this.Load += new System.EventHandler(this.EditStudent_Load);
             this.Controls.SetChildIndex(this.grpStudentDetails, 0);
             this.Controls.SetChildIndex(this.btnEditStudent, 0);
-            this.Controls.SetChildIndex(this.btnAddCancel, 0);
+            this.Controls.SetChildIndex(this.btnEditCancel, 0);
             this.Controls.SetChildIndex(this.grpCourseDetails, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.btnDeleteStudent, 0);
             this.Controls.SetChildIndex(this.lblSearchStudent, 0);
             this.Controls.SetChildIndex(this.txtSearchStudent, 0);
             this.Controls.SetChildIndex(this.btnSearch, 0);
@@ -453,22 +412,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblValidCounty;
-        private System.Windows.Forms.Label lblValidCity;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblValidAddress1;
-        private System.Windows.Forms.Label lblValidPhone;
-        private System.Windows.Forms.Label lblValidEmail;
-        private System.Windows.Forms.Label lblValidSname;
-        private System.Windows.Forms.Label lblValidFname;
         private System.Windows.Forms.GroupBox grpCourseDetails;
         private System.Windows.Forms.RadioButton rdoPostgrad;
         private System.Windows.Forms.RadioButton rdoUndergrad;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.ComboBox cboEditCourse;
         private System.Windows.Forms.Label lblCourse;
-        private System.Windows.Forms.Button btnAddCancel;
+        private System.Windows.Forms.Button btnEditCancel;
         private System.Windows.Forms.Button btnEditStudent;
         private System.Windows.Forms.ComboBox cboEditCounty;
         private System.Windows.Forms.TextBox txtEditCity;
@@ -487,9 +437,13 @@
         private System.Windows.Forms.Label lblAddSname;
         private System.Windows.Forms.GroupBox grpStudentDetails;
         private System.Windows.Forms.Label lblAddFname;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Label lblSearchStudent;
         private System.Windows.Forms.TextBox txtSearchStudent;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblValidFname;
     }
 }

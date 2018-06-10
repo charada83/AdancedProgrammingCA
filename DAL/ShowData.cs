@@ -12,11 +12,14 @@ namespace DAL
     {
         DataTable dt = new DataTable();
 
+        // public static System.Windows.Forms.DataGridView GRID { get; set; }
+
         public DataTable ShowStudents()
         {
             SqlCommand cmd = new SqlCommand("uspGetAllStudents", OpenCon());
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader rd = cmd.ExecuteReader();
+            dt.Clear();
             dt.Load(rd);
             return dt;
         }
@@ -30,7 +33,7 @@ namespace DAL
             return dt;
         }
 
-        public int getCourseID(string level, string courseTitle)
+        public int GetCourseID(string level, string courseTitle)
         {
             return 2;
         }

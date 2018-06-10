@@ -19,6 +19,7 @@ namespace AdancedProgrammingCA
     {
         DAO dao = new DAO();
         ShowData sd = new ShowData();
+        
 
         public AddStudent()
         {
@@ -39,6 +40,7 @@ namespace AdancedProgrammingCA
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            Validation valid = new Validation();
             //if (RegexValidation.checkEmail(txtAddEmail.Text.ToString()))
             //{
             //    lblValidEmail.Text = "Email Valid";
@@ -48,7 +50,6 @@ namespace AdancedProgrammingCA
             //    lblValidEmail.Text = "Invalid Email";
             //}
 
-            string id = lblShowStudentId.Text;
             string firstName = txtAddFname.Text;
             string lastName = txtAddSname.Text;
             string addressLine1 = txtAddAddress1.Text;
@@ -57,12 +58,10 @@ namespace AdancedProgrammingCA
             string county = cboAddCounty.SelectedItem.ToString();
             string email = txtAddEmail.Text;
             string phone = txtAddPhone.Text;
-            //int courseId = 1;
             string courseTitle = cboAddCourse.SelectedValue.ToString();
             string level = LevelChoice();
 
-            int courseId = sd.getCourseID(level, courseTitle);
-            
+            int courseId = sd.GetCourseID(level, courseTitle);           
 
             AddNewStudent addStu = new AddNewStudent(firstName, lastName, addressLine1, addressLine2, city, county, email, phone, courseId);
             addStu.AddStudentToDb();
@@ -71,6 +70,7 @@ namespace AdancedProgrammingCA
 
             MessageBox.Show("Student added to database");
 
+            Program.SHOW_STUDENTS.RefreshGrid();
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)
@@ -107,15 +107,6 @@ namespace AdancedProgrammingCA
             }
         }
 
-        private void cboAddCourse_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-           // cboAddCourse.DisplayMember = "CourseTitle";
-           // cboAddCourse.ValueMember = "CourseId";
-
-           // e.dropdown.value 
-             //   e.radion.selected 
-            
-        }
     }
 }

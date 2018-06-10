@@ -8,6 +8,9 @@ namespace AdancedProgrammingCA
 {
     static class Program
     {
+        public static DataGridView GRID { get; internal set; }
+        public static ShowStudents SHOW_STUDENTS { get; internal set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
