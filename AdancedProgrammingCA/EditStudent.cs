@@ -21,7 +21,6 @@ namespace AdancedProgrammingCA
         {
             InitializeComponent();
             cboEditCounty.DataSource = Enum.GetValues(typeof(Counties));
-
             txtEditFname.Text = student["FirstName"];
             txtEditSname.Text = student["LastName"];
             txtEditEmail.Text = student["Email"];

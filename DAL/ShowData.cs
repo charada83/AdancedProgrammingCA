@@ -48,6 +48,7 @@ namespace DAL
 
             Dictionary<String, String> student = new Dictionary<String, String>();
 
+            //student.Add("StudentId", rd[0].ToString());
             student.Add("FirstName", rd[1].ToString());
             student.Add("LastName", rd[2].ToString());
             student.Add("Email", rd[3].ToString());
