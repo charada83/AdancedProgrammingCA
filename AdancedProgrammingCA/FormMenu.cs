@@ -1,4 +1,5 @@
 ﻿using BAL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ namespace AdancedProgrammingCA
 {
     public partial class FormMenu : Form
     {
-        
+        ShowData sd = new ShowData();
 
         public FormMenu()
         {
@@ -46,14 +47,15 @@ namespace AdancedProgrammingCA
         {
             // AddStudent.MY_PROPERTY = 12;
             int studentId = Program.SHOW_STUDENTS.GetCurrentStudentId();
-            EditStudent editStu = new EditStudent();
+            Dictionary<String, String> student = sd.GetStudentDataById(studentId);
+            EditStudent editStu = new EditStudent(student);
             editStu.ShowDialog();
         }
 
         private void deleteStudentMenuItem_Click(object sender, EventArgs e)
         {
-            EditStudent deleteStu = new EditStudent();
-            deleteStu.ShowDialog();
+            //EditStudent deleteStu = new EditStudent();
+            //deleteStu.ShowDialog();
         }
 
         private void databaseHistoryMenuItem_Click(object sender, EventArgs e)

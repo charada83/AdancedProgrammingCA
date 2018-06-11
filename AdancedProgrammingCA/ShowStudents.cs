@@ -46,7 +46,8 @@ namespace AdancedProgrammingCA
 
         private void dgvStudents_Click(object sender, EventArgs e)
         {
-            EditStudent edit = new EditStudent();
+            //EditStudent edit = new EditStudent();
+           
             
         }
 

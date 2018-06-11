@@ -58,9 +58,6 @@
             this.lblValidFname = new System.Windows.Forms.Label();
             this.lblAddFname = new System.Windows.Forms.Label();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
-            this.lblSearchStudent = new System.Windows.Forms.Label();
-            this.txtSearchStudent = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.grpCourseDetails.SuspendLayout();
             this.grpStudentDetails.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +69,7 @@
             this.grpCourseDetails.Controls.Add(this.lblLevel);
             this.grpCourseDetails.Controls.Add(this.cboEditCourse);
             this.grpCourseDetails.Controls.Add(this.lblCourse);
-            this.grpCourseDetails.Location = new System.Drawing.Point(674, 118);
+            this.grpCourseDetails.Location = new System.Drawing.Point(672, 104);
             this.grpCourseDetails.Name = "grpCourseDetails";
             this.grpCourseDetails.Size = new System.Drawing.Size(321, 255);
             this.grpCourseDetails.TabIndex = 57;
@@ -145,6 +142,7 @@
             this.btnEditStudent.TabIndex = 53;
             this.btnEditStudent.Text = "Edit Student";
             this.btnEditStudent.UseVisualStyleBackColor = true;
+            this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click_1);
             // 
             // cboEditCounty
             // 
@@ -353,39 +351,11 @@
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
             // 
-            // lblSearchStudent
-            // 
-            this.lblSearchStudent.AutoSize = true;
-            this.lblSearchStudent.Location = new System.Drawing.Point(181, 54);
-            this.lblSearchStudent.Name = "lblSearchStudent";
-            this.lblSearchStudent.Size = new System.Drawing.Size(121, 20);
-            this.lblSearchStudent.TabIndex = 59;
-            this.lblSearchStudent.Text = "Search Student";
-            // 
-            // txtSearchStudent
-            // 
-            this.txtSearchStudent.Location = new System.Drawing.Point(356, 51);
-            this.txtSearchStudent.Name = "txtSearchStudent";
-            this.txtSearchStudent.Size = new System.Drawing.Size(253, 26);
-            this.txtSearchStudent.TabIndex = 60;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(656, 44);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(137, 40);
-            this.btnSearch.TabIndex = 61;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
             // EditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 629);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearchStudent);
-            this.Controls.Add(this.lblSearchStudent);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.grpCourseDetails);
             this.Controls.Add(this.btnEditCancel);
@@ -399,9 +369,6 @@
             this.Controls.SetChildIndex(this.btnEditCancel, 0);
             this.Controls.SetChildIndex(this.grpCourseDetails, 0);
             this.Controls.SetChildIndex(this.btnDeleteStudent, 0);
-            this.Controls.SetChildIndex(this.lblSearchStudent, 0);
-            this.Controls.SetChildIndex(this.txtSearchStudent, 0);
-            this.Controls.SetChildIndex(this.btnSearch, 0);
             this.grpCourseDetails.ResumeLayout(false);
             this.grpCourseDetails.PerformLayout();
             this.grpStudentDetails.ResumeLayout(false);
@@ -438,9 +405,6 @@
         private System.Windows.Forms.GroupBox grpStudentDetails;
         private System.Windows.Forms.Label lblAddFname;
         private System.Windows.Forms.Button btnDeleteStudent;
-        private System.Windows.Forms.Label lblSearchStudent;
-        private System.Windows.Forms.TextBox txtSearchStudent;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

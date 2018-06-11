@@ -15,6 +15,8 @@ namespace DAL
 
         public DAO()
         {
+            // ConfigurationManager.ConnectionStrings["DBCon"].ConnectionString
+            // 
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCon"].ConnectionString);
         }
 

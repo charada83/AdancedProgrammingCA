@@ -52,18 +52,18 @@ namespace AdancedProgrammingCA
 
             string firstName = txtAddFname.Text;
             string lastName = txtAddSname.Text;
+            string email = txtAddEmail.Text;
+            string phone = txtAddPhone.Text;
             string addressLine1 = txtAddAddress1.Text;
             string addressLine2 = txtAddAddress2.Text;
             string city = txtAddCity.Text;
-            string county = cboAddCounty.SelectedItem.ToString();
-            string email = txtAddEmail.Text;
-            string phone = txtAddPhone.Text;
+            string county = cboAddCounty.SelectedItem.ToString();         
             string courseTitle = cboAddCourse.SelectedValue.ToString();
             string level = LevelChoice();
 
             int courseId = sd.GetCourseID(level, courseTitle);           
 
-            AddNewStudent addStu = new AddNewStudent(firstName, lastName, addressLine1, addressLine2, city, county, email, phone, courseId);
+            AddNewStudent addStu = new AddNewStudent(firstName, lastName, email, phone, addressLine1, addressLine2, city, county, courseId);
             addStu.AddStudentToDb();
 
             CancelItems();
