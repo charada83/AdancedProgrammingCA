@@ -71,6 +71,8 @@ namespace AdancedProgrammingCA
             MessageBox.Show("Student added to database");
 
             Program.SHOW_STUDENTS.RefreshGrid();
+
+            this.Close();
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)

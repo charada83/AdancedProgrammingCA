@@ -58,6 +58,8 @@
             this.lblValidFname = new System.Windows.Forms.Label();
             this.lblAddFname = new System.Windows.Forms.Label();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.lblStudentId = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.grpCourseDetails.SuspendLayout();
             this.grpStudentDetails.SuspendLayout();
             this.SuspendLayout();
@@ -351,11 +353,31 @@
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
             // 
+            // lblStudentId
+            // 
+            this.lblStudentId.AutoSize = true;
+            this.lblStudentId.Location = new System.Drawing.Point(38, 62);
+            this.lblStudentId.Name = "lblStudentId";
+            this.lblStudentId.Size = new System.Drawing.Size(87, 20);
+            this.lblStudentId.TabIndex = 59;
+            this.lblStudentId.Text = "Student ID";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(209, 62);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(51, 20);
+            this.lblId.TabIndex = 60;
+            this.lblId.Text = "label5";
+            // 
             // EditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 629);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.lblStudentId);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.grpCourseDetails);
             this.Controls.Add(this.btnEditCancel);
@@ -369,6 +391,8 @@
             this.Controls.SetChildIndex(this.btnEditCancel, 0);
             this.Controls.SetChildIndex(this.grpCourseDetails, 0);
             this.Controls.SetChildIndex(this.btnDeleteStudent, 0);
+            this.Controls.SetChildIndex(this.lblStudentId, 0);
+            this.Controls.SetChildIndex(this.lblId, 0);
             this.grpCourseDetails.ResumeLayout(false);
             this.grpCourseDetails.PerformLayout();
             this.grpStudentDetails.ResumeLayout(false);
@@ -409,5 +433,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblValidFname;
+        private System.Windows.Forms.Label lblStudentId;
+        private System.Windows.Forms.Label lblId;
     }
 }

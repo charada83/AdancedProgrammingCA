@@ -21,6 +21,8 @@ namespace AdancedProgrammingCA
         {
             InitializeComponent();
             cboEditCounty.DataSource = Enum.GetValues(typeof(Counties));
+
+            lblId.Text = student["StudentId"];
             txtEditFname.Text = student["FirstName"];
             txtEditSname.Text = student["LastName"];
             txtEditEmail.Text = student["Email"];
@@ -60,7 +62,21 @@ namespace AdancedProgrammingCA
 
         private void btnEditStudent_Click_1(object sender, EventArgs e)
         {
-            edit.EditStudent();
+            int studentId = int.Parse(lblId.Text);
+            string email = txtEditEmail.Text;
+            string phone = txtEditPhone.Text;
+            string address1 = txtEditAddress1.Text;
+            string address2 = txtEditAddress2.Text;
+            string city = txtEditCity.Text;
+            string county = cboEditCounty.Text;
+
+            edit.EditStudent(studentId, email, phone, address1, address2, city, county);
+
+            MessageBox.Show("Record successfully updated");
+
+            Program.SHOW_STUDENTS.RefreshGrid();
+
+            this.Close();
 
         }
     }
