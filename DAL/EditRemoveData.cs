@@ -27,10 +27,11 @@ namespace DAL
 
         }
 
-        public void DeleteStudent()
+        public void DeleteStudent(int studentId)
         {
             SqlCommand cmd = new SqlCommand("uspDeleteStudent", OpenCon());
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("StudentId", studentId);
             cmd.ExecuteNonQuery();
             CloseCon();
         }

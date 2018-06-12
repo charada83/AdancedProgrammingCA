@@ -352,6 +352,7 @@
             this.btnDeleteStudent.TabIndex = 58;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // lblStudentId
             // 

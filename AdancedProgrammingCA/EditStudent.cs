@@ -79,5 +79,28 @@ namespace AdancedProgrammingCA
             this.Close();
 
         }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+            int studentId = int.Parse(lblId.Text);
+            //edit.DeleteStudent(studentId);
+
+            var confirm = MessageBox.Show("Are you sure you want to delete this record?", "Delete",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm == DialogResult.Yes)
+            {
+                edit.DeleteStudent(studentId);
+                MessageBox.Show("Record deleted");
+            }
+            else
+            {
+                this.Close();
+            }
+
+            Program.SHOW_STUDENTS.RefreshGrid();
+
+            this.Close();
+
+        }
     }
 }
