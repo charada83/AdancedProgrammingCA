@@ -43,10 +43,5 @@ namespace BAL
             ad.AddNewStudent(FirstName, LastName, AddressLine1, AddressLine2, City, County.ToString(), Email, Phone, CourseId);
         }
 
-        //public void GetId()
-        //{
-        //    string id = StudentId.ToString();
-        //}
-
     }
 }

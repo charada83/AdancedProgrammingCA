@@ -20,29 +20,18 @@ namespace AdancedProgrammingCA
     {
         DAO dao = new DAO();
         ShowData sd = new ShowData();
+        //RegexValidation val = new RegexValidation();
         
-
         public AddStudent()
         {
             InitializeComponent();
             cboAddCounty.DataSource = Enum.GetValues(typeof(Counties));
             cboAddCounty.SelectedItem = "Select County";
             cboAddCourse.DataSource = Enum.GetValues(typeof(Courses));
-
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            //Validation valid = new Validation();
-            //if (valid.checkEmail(txtAddEmail.Text.ToString())
-            //{
-            //    lblValidEmail.Text = "Email Valid";
-            //}
-            //else
-            //{
-            //    lblValidEmail.Text = "Invalid Email";
-            //}
-
             string firstName = txtAddFname.Text;
             string lastName = txtAddSname.Text;
             string email = txtAddEmail.Text;
@@ -91,7 +80,8 @@ namespace AdancedProgrammingCA
         {
             int flag = 0;
             Regex r = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
-            
+            Regex num = new Regex(@"^[0-9]*$");
+
             if (txtAddFname.Text == "")
             {
                 txtAddFname.Focus();
@@ -100,14 +90,20 @@ namespace AdancedProgrammingCA
             }
             else if (txtAddSname.Text == "")
             {
-                txtAddFname.Focus();
+                txtAddSname.Focus();
                 errorProvider1.SetError(txtAddSname, MessageBox.Show("Please enter Surname", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
                 flag = 1;
             }
             else if (!r.IsMatch(txtAddEmail.Text))
             {
-                txtAddFname.Focus();
+                txtAddEmail.Focus();
                 errorProvider1.SetError(txtAddEmail, MessageBox.Show("Please enter valid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (!num.IsMatch(txtAddPhone.Text))
+            {
+                txtAddPhone.Focus();
+                errorProvider1.SetError(txtAddPhone, MessageBox.Show("Please enter numbers only for Phone", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
                 flag = 1;
             }
             else if (txtAddAddress1.Text == "")
@@ -118,20 +114,33 @@ namespace AdancedProgrammingCA
             }
             else if (txtAddCity.Text == "")
             {
-                txtAddAddress1.Focus();
+                txtAddCity.Focus();
                 errorProvider1.SetError(txtAddCity, MessageBox.Show("Please enter City", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
                 flag = 1;
             }
             else if (cboAddCounty.Text == "")
             {
-                txtAddAddress1.Focus();
+                cboAddCounty.Focus();
                 errorProvider1.SetError(cboAddCounty, MessageBox.Show("Please enter City", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (cboAddCourse.SelectedItem.ToString() == "")
+            {
+                cboAddCourse.Focus();
+                errorProvider1.SetError(cboAddCourse, MessageBox.Show("Please select a Course", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (!rdoPostgrad.Checked && !rdoUndergrad.Checked)
+            {
+                rdoUndergrad.Focus();
+                errorProvider1.SetError(rdoUndergrad, MessageBox.Show("Please select a Level", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
                 flag = 1;
             }
 
             return flag;
         }
             
+
 
         public string LevelChoice()
         {

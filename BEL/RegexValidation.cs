@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BAL
 {
-    public class Validation
+    public class RegexValidation
     {
 
-        public static bool checkEmail(string email)
+        public bool CheckEmail(string email)
         {
             bool IsValid = false;
             Regex r = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
