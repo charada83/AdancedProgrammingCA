@@ -86,7 +86,7 @@ namespace AdancedProgrammingCA
             //edit.DeleteStudent(studentId);
 
             var confirm = MessageBox.Show("Are you sure you want to delete this record?", "Delete",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirm == DialogResult.Yes)
             {
                 edit.DeleteStudent(studentId);

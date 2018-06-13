@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
+using System.Text.RegularExpressions;
 
 namespace AdancedProgrammingCA
 {
@@ -27,21 +28,13 @@ namespace AdancedProgrammingCA
             cboAddCounty.DataSource = Enum.GetValues(typeof(Counties));
             cboAddCounty.SelectedItem = "Select County";
             cboAddCourse.DataSource = Enum.GetValues(typeof(Courses));
-            //cboAddCourse.DataSource = sd.GetCourses();
 
         }
 
-        //public void FillCourseCombo()
-        //{
-        //    cboAddCourse.ValueMember = "CourseId";
-        //    cboAddCourse.DisplayMember = "CourseTitle";
-        //    cboAddCourse.DataSource = sd.GetCourses();
-        //}
-
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            Validation valid = new Validation();
-            //if (RegexValidation.checkEmail(txtAddEmail.Text.ToString()))
+            //Validation valid = new Validation();
+            //if (valid.checkEmail(txtAddEmail.Text.ToString())
             //{
             //    lblValidEmail.Text = "Email Valid";
             //}
@@ -61,18 +54,20 @@ namespace AdancedProgrammingCA
             string courseTitle = cboAddCourse.SelectedValue.ToString();
             string level = LevelChoice();
 
-            int courseId = sd.GetCourseID(level, courseTitle);           
+            int courseId = sd.GetCourseID(level, courseTitle);
 
-            AddNewStudent addStu = new AddNewStudent(firstName, lastName, email, phone, addressLine1, addressLine2, city, county, courseId);
-            addStu.AddStudentToDb();
+            if (Validation() == 0)
+            {
+                errorProvider1.Clear();
+                AddNewStudent addStu = new AddNewStudent(firstName, lastName, email, phone, addressLine1, addressLine2, city, county, courseId);
+                addStu.AddStudentToDb();
+                MessageBox.Show("Student added to database");
+                CancelItems();
 
-            CancelItems();
+                Program.SHOW_STUDENTS.RefreshGrid();
 
-            MessageBox.Show("Student added to database");
-
-            Program.SHOW_STUDENTS.RefreshGrid();
-
-            this.Close();
+                this.Close();
+            }          
         }
 
         private void btnAddCancel_Click(object sender, EventArgs e)
@@ -92,10 +87,51 @@ namespace AdancedProgrammingCA
             txtAddPhone.Clear();
         }
 
-       public void Validation(string re, TextBox txt, Label lbl)
+        public int Validation()
         {
+            int flag = 0;
+            Regex r = new Regex(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$");
+            
+            if (txtAddFname.Text == "")
+            {
+                txtAddFname.Focus();
+                errorProvider1.SetError(txtAddFname, MessageBox.Show("Please enter Firstname", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (txtAddSname.Text == "")
+            {
+                txtAddFname.Focus();
+                errorProvider1.SetError(txtAddSname, MessageBox.Show("Please enter Surname", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (!r.IsMatch(txtAddEmail.Text))
+            {
+                txtAddFname.Focus();
+                errorProvider1.SetError(txtAddEmail, MessageBox.Show("Please enter valid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (txtAddAddress1.Text == "")
+            {
+                txtAddAddress1.Focus();
+                errorProvider1.SetError(txtAddAddress1, MessageBox.Show("Please enter Address Line1 details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (txtAddCity.Text == "")
+            {
+                txtAddAddress1.Focus();
+                errorProvider1.SetError(txtAddCity, MessageBox.Show("Please enter City", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
+            else if (cboAddCounty.Text == "")
+            {
+                txtAddAddress1.Focus();
+                errorProvider1.SetError(cboAddCounty, MessageBox.Show("Please enter City", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error).ToString());
+                flag = 1;
+            }
 
+            return flag;
         }
+            
 
         public string LevelChoice()
         {
@@ -109,6 +145,19 @@ namespace AdancedProgrammingCA
             }
         }
 
+        private void txtAddFname_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
 
+        private void txtAddSname_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
+
+        private void txtAddEmail_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+        }
     }
 }

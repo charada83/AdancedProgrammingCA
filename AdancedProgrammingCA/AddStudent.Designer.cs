@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblAddFname = new System.Windows.Forms.Label();
             this.lblAddSname = new System.Windows.Forms.Label();
             this.lblAddEmail = new System.Windows.Forms.Label();
@@ -59,8 +60,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpStudentDetails.SuspendLayout();
             this.grpCourseDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddFname
@@ -141,6 +144,7 @@
             this.txtAddFname.Name = "txtAddFname";
             this.txtAddFname.Size = new System.Drawing.Size(286, 26);
             this.txtAddFname.TabIndex = 12;
+            this.txtAddFname.TextChanged += new System.EventHandler(this.txtAddFname_TextChanged);
             // 
             // txtAddSname
             // 
@@ -148,6 +152,7 @@
             this.txtAddSname.Name = "txtAddSname";
             this.txtAddSname.Size = new System.Drawing.Size(286, 26);
             this.txtAddSname.TabIndex = 13;
+            this.txtAddSname.TextChanged += new System.EventHandler(this.txtAddSname_TextChanged);
             // 
             // txtAddEmail
             // 
@@ -155,6 +160,7 @@
             this.txtAddEmail.Name = "txtAddEmail";
             this.txtAddEmail.Size = new System.Drawing.Size(286, 26);
             this.txtAddEmail.TabIndex = 14;
+            this.txtAddEmail.TextChanged += new System.EventHandler(this.txtAddEmail_TextChanged);
             // 
             // txtAddPhone
             // 
@@ -344,6 +350,10 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "*Required";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -406,6 +416,7 @@
             this.grpStudentDetails.PerformLayout();
             this.grpCourseDetails.ResumeLayout(false);
             this.grpCourseDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,5 +455,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
