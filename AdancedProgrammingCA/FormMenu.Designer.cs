@@ -38,6 +38,7 @@
             this.deleteStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseHistoryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveStudentToXML = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // exitLoginMenuItem
             // 
             this.exitLoginMenuItem.Name = "exitLoginMenuItem";
-            this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exitLoginMenuItem.Size = new System.Drawing.Size(218, 30);
             this.exitLoginMenuItem.Text = "&Exit Application";
             this.exitLoginMenuItem.Click += new System.EventHandler(this.exitLoginMenuItem_Click);
             // 
@@ -81,7 +82,8 @@
             this.studentMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addStudentMenuItem,
             this.editStudentMenuItem,
-            this.deleteStudentMenuItem});
+            this.deleteStudentMenuItem,
+            this.saveStudentToXML});
             this.studentMenuItem.Name = "studentMenuItem";
             this.studentMenuItem.Size = new System.Drawing.Size(85, 29);
             this.studentMenuItem.Text = "&Student";
@@ -89,21 +91,21 @@
             // addStudentMenuItem
             // 
             this.addStudentMenuItem.Name = "addStudentMenuItem";
-            this.addStudentMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.addStudentMenuItem.Size = new System.Drawing.Size(261, 30);
             this.addStudentMenuItem.Text = "Add Student";
             this.addStudentMenuItem.Click += new System.EventHandler(this.addStudentMenuItem_Click);
             // 
             // editStudentMenuItem
             // 
             this.editStudentMenuItem.Name = "editStudentMenuItem";
-            this.editStudentMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.editStudentMenuItem.Size = new System.Drawing.Size(261, 30);
             this.editStudentMenuItem.Text = "Edit Student";
             this.editStudentMenuItem.Click += new System.EventHandler(this.editStudentMenuItem_Click);
             // 
             // deleteStudentMenuItem
             // 
             this.deleteStudentMenuItem.Name = "deleteStudentMenuItem";
-            this.deleteStudentMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.deleteStudentMenuItem.Size = new System.Drawing.Size(261, 30);
             this.deleteStudentMenuItem.Text = "Delete Student";
             this.deleteStudentMenuItem.Click += new System.EventHandler(this.deleteStudentMenuItem_Click);
             // 
@@ -118,9 +120,16 @@
             // databaseHistoryMenuItem
             // 
             this.databaseHistoryMenuItem.Name = "databaseHistoryMenuItem";
-            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(232, 30);
             this.databaseHistoryMenuItem.Text = "Database History";
             this.databaseHistoryMenuItem.Click += new System.EventHandler(this.databaseHistoryMenuItem_Click);
+            // 
+            // saveStudentToXML
+            // 
+            this.saveStudentToXML.Name = "saveStudentToXML";
+            this.saveStudentToXML.Size = new System.Drawing.Size(261, 30);
+            this.saveStudentToXML.Text = "Save Student to XML";
+            this.saveStudentToXML.Click += new System.EventHandler(this.saveStudentToXML_Click);
             // 
             // FormMenu
             // 
@@ -150,5 +159,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteStudentMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseHistoryMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveStudentToXML;
     }
 }
