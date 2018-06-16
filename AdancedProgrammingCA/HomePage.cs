@@ -27,15 +27,15 @@ namespace AdancedProgrammingCA
 
             Login log = new Login(user, pass);
 
-            string status = log.Username;
+            string status = log.CheckUserPass();
 
             if (status == "no")
             {
-                MessageBox.Show("Failed to Login");
+                MessageBox.Show("Failed to Login. Try Again.");
             }
             else
             {
-                MessageBox.Show("Welcome " + status);
+                MessageBox.Show("Welcome " + user);
                 this.Hide();
                 ShowStudents students = new ShowStudents();
                 students.Show();

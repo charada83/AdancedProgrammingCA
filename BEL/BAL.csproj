@@ -65,7 +65,6 @@
     <Compile Include="Enums\Counties.cs" />
     <Compile Include="Enums\Courses.cs" />
     <Compile Include="Enums\RecordStatus.cs" />
-    <Compile Include="Item.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="HashData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

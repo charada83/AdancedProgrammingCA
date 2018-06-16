@@ -33,9 +33,17 @@ namespace DAL
             return dt;
         }
 
-        public int GetCourseID(string level, string courseTitle)
+        public int GetCourseID (string level, string courseTitle)
         {
-            return 2;
+            
+            SqlCommand cmd = new SqlCommand("uspGetCourseId", OpenCon());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@CourseTitle", courseTitle);
+            //cmd.Parameters.AddWithValue("@CourseLevel", level);
+            SqlDataReader rd = cmd.ExecuteReader();
+            rd.Read();
+
+            return int.Parse(rd[0].ToString());
         }
 
         public Dictionary<String, String> GetStudentDataById(int studentId)
