@@ -40,7 +40,7 @@ namespace AdancedProgrammingCA
             string addressLine2 = txtAddAddress2.Text;
             string city = txtAddCity.Text;
             string county = cboAddCounty.SelectedItem.ToString();         
-            string courseTitle = cboAddCourse.SelectedValue.ToString();
+            string courseTitle = cboAddCourse.SelectedItem.ToString();
             string level = LevelChoice();
 
             int courseId = sd.GetCourseID(level, courseTitle);
