@@ -129,6 +129,7 @@
             // 
             // btnCancelReg
             // 
+            this.btnCancelReg.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelReg.Location = new System.Drawing.Point(284, 258);
             this.btnCancelReg.Name = "btnCancelReg";
             this.btnCancelReg.Size = new System.Drawing.Size(142, 54);
@@ -141,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(515, 415);
             this.Controls.Add(this.btnCancelReg);
             this.Controls.Add(this.txtRegPassword);
@@ -153,6 +155,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblFname);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";

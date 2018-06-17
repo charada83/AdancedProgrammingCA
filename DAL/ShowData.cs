@@ -37,8 +37,8 @@ namespace DAL
         {
             SqlCommand cmd = new SqlCommand("uspGetCourseId", OpenCon());
             cmd.CommandType = CommandType.StoredProcedure;
-            SqlParameter t = cmd.Parameters.AddWithValue("@CourseTitle", courseTitle);
-            SqlParameter y = cmd.Parameters.AddWithValue("@CourseLevel", level);
+            cmd.Parameters.AddWithValue("@CourseTitle", courseTitle);
+            cmd.Parameters.AddWithValue("@CourseLevel", level);
 
             SqlDataReader rd = cmd.ExecuteReader();
 
@@ -69,6 +69,16 @@ namespace DAL
             CloseCon();
             return student;
             
+        }
+
+        public DataTable ShowDatabaseHistory()
+        {
+            SqlCommand cmd = new SqlCommand("uspGetDatabaseHistory", OpenCon());
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader rd = cmd.ExecuteReader();
+            dt.Clear();
+            dt.Load(rd);
+            return dt;
         }
 
     }

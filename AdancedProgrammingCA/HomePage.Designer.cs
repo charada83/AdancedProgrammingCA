@@ -129,20 +129,21 @@
             // exitLoginMenuItem
             // 
             this.exitLoginMenuItem.Name = "exitLoginMenuItem";
-            this.exitLoginMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exitLoginMenuItem.Size = new System.Drawing.Size(172, 30);
             this.exitLoginMenuItem.Text = "Exit Login";
             this.exitLoginMenuItem.Click += new System.EventHandler(this.exitLoginMenuItem_Click);
             // 
             // menuRegister
             // 
             this.menuRegister.Name = "menuRegister";
-            this.menuRegister.Size = new System.Drawing.Size(252, 30);
+            this.menuRegister.Size = new System.Drawing.Size(172, 30);
             this.menuRegister.Text = "Register";
             // 
             // formSMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(515, 415);
             this.Controls.Add(this.btnLoginCancel);
             this.Controls.Add(this.lnkRegister);

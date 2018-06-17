@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.lblDisplay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -35,6 +36,10 @@
             // 
             // dgvStudents
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudents.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -44,7 +49,6 @@
             this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudents.Size = new System.Drawing.Size(1051, 495);
             this.dgvStudents.TabIndex = 1;
-            this.dgvStudents.Click += new System.EventHandler(this.dgvStudents_Click);
             // 
             // lblDisplay
             // 

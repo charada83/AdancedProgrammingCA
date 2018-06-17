@@ -66,6 +66,12 @@
     <Compile Include="AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseHistory.Designer.cs">
+      <DependentUpon>DatabaseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseHistory.resx">
+      <DependentUpon>DatabaseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditStudent.resx">
       <DependentUpon>EditStudent.cs</DependentUpon>

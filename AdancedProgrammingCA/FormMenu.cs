@@ -62,8 +62,9 @@ namespace AdancedProgrammingCA
 
         private void databaseHistoryMenuItem_Click(object sender, EventArgs e)
         {
-            //DatabaseHistory history = new DatabaseHistory();
-            //history.ShowDialog();
+            DatabaseHistory history = new DatabaseHistory();
+            history.ShowDialog();
+
         }
 
         private void exitLoginMenuItem_Click(object sender, EventArgs e)

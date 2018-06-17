@@ -10,6 +10,7 @@ namespace AdancedProgrammingCA
     {
         public static DataGridView GRID { get; internal set; }
         public static ShowStudents SHOW_STUDENTS { get; internal set; }
+        public static DatabaseHistory SHOW_DATABASE_HISTORY { get; internal set; }
 
         /// <summary>
         /// The main entry point for the application.

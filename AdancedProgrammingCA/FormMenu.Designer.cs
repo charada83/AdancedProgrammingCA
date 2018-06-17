@@ -36,9 +36,9 @@
             this.addStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStudentMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveStudentToXML = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseHistoryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveStudentToXML = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,13 @@
             this.deleteStudentMenuItem.Text = "Delete Student";
             this.deleteStudentMenuItem.Click += new System.EventHandler(this.deleteStudentMenuItem_Click);
             // 
+            // saveStudentToXML
+            // 
+            this.saveStudentToXML.Name = "saveStudentToXML";
+            this.saveStudentToXML.Size = new System.Drawing.Size(261, 30);
+            this.saveStudentToXML.Text = "Save Student to XML";
+            this.saveStudentToXML.Click += new System.EventHandler(this.saveStudentToXML_Click);
+            // 
             // viewMenuItem
             // 
             this.viewMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -120,21 +127,15 @@
             // databaseHistoryMenuItem
             // 
             this.databaseHistoryMenuItem.Name = "databaseHistoryMenuItem";
-            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(232, 30);
+            this.databaseHistoryMenuItem.Size = new System.Drawing.Size(252, 30);
             this.databaseHistoryMenuItem.Text = "Database History";
             this.databaseHistoryMenuItem.Click += new System.EventHandler(this.databaseHistoryMenuItem_Click);
-            // 
-            // saveStudentToXML
-            // 
-            this.saveStudentToXML.Name = "saveStudentToXML";
-            this.saveStudentToXML.Size = new System.Drawing.Size(261, 30);
-            this.saveStudentToXML.Text = "Save Student to XML";
-            this.saveStudentToXML.Click += new System.EventHandler(this.saveStudentToXML_Click);
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(565, 487);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
