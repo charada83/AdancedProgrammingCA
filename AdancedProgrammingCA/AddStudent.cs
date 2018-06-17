@@ -20,7 +20,6 @@ namespace AdancedProgrammingCA
     {
         DAO dao = new DAO();
         ShowData sd = new ShowData();
-        //RegexValidation val = new RegexValidation();
         
         public AddStudent()
         {

@@ -55,6 +55,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvDatabaseHistory);
             this.Name = "DatabaseHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Database History";
             this.Load += new System.EventHandler(this.DatabaseHistory_Load);
             this.Controls.SetChildIndex(this.dgvDatabaseHistory, 0);

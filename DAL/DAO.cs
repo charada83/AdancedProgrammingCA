@@ -17,7 +17,7 @@ namespace DAL
         {
             // ConfigurationManager.ConnectionStrings["DBCon"].ConnectionString
             // "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\charl\OneDrive\Documents\AdvancedProgramming\AdvancedProgCA\AdancedProgrammingCA\AdancedProgrammingCA\Database.mdf;Integrated Security=True" providerName="System.Data.SqlClient
-            con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\charl\OneDrive\Documents\AdvancedProgramming\AdvancedProgCA\AdancedProgrammingCA\AdancedProgrammingCA\Database.mdf; Integrated Security = True");
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\charl\OneDrive\Documents\AdvancedProgramming\AdvancedProgCA\AdancedProgrammingCA\AdancedProgrammingCA\Database.mdf;Integrated Security=True");
         }
 
         public SqlConnection OpenCon()

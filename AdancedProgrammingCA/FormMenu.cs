@@ -48,8 +48,24 @@ namespace AdancedProgrammingCA
         {
             int studentId = Program.SHOW_STUDENTS.GetCurrentStudentId();
             Dictionary<String, String> student = sd.GetStudentDataById(studentId);
-            EditStudent editStu = new EditStudent(student);
-            editStu.ShowDialog();
+
+            bool formOpen = false;
+
+            for (int i = 0; i < Application.OpenForms.Count; i++)
+            {
+                Form current = Application.OpenForms[i];
+                if (current.Name == "EditStudent")
+                {
+                    current.BringToFront();
+                    formOpen = true;
+                }
+            }
+            if (!formOpen)
+            {
+                EditStudent form = new EditStudent(student);
+                form.Name = "EditStudent";
+                form.Show();
+            }
         }
 
         private void deleteStudentMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +85,7 @@ namespace AdancedProgrammingCA
 
         private void exitLoginMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Thank you for using the Student Management System");
             Application.Exit();
         }
 
@@ -92,7 +109,7 @@ namespace AdancedProgrammingCA
             XmlSerializer x = new XmlSerializer(typeof(Item[]), new XmlRootAttribute() { ElementName = "items" });
 
             x.Serialize(o, student.Select(kv => new Item() { id = kv.Key, value = kv.Value }).ToArray());
-            MessageBox.Show("Saved");
+            MessageBox.Show("Student Saved");
             o.Close();
         }
     }

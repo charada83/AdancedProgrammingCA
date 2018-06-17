@@ -32,6 +32,7 @@ namespace AdancedProgrammingCA
             txtEditCity.Text = student["City"];
             cboEditCounty.SelectedItem = Enum.Parse(typeof(Counties), student["County"]);
 
+
         }
 
 
@@ -69,6 +70,7 @@ namespace AdancedProgrammingCA
             string address2 = txtEditAddress2.Text;
             string city = txtEditCity.Text;
             string county = cboEditCounty.Text;
+
 
             edit.EditStudent(studentId, email, phone, address1, address2, city, county);
 

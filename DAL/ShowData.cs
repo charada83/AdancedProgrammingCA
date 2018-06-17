@@ -47,6 +47,7 @@ namespace DAL
             return rd.GetInt32(0);
         }
 
+
         public Dictionary<String, String> GetStudentDataById(int studentId)
         {
             SqlCommand cmd = new SqlCommand("uspGetStudentById", OpenCon());

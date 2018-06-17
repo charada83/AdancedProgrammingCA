@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BAL
 {
-    public class RegexValidation
+    public class Validation
     {
 
         public bool CheckEmail(string email)
@@ -20,5 +20,6 @@ namespace BAL
             }
             return IsValid;
         }
+
     }
 }
